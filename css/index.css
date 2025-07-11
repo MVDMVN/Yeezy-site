@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: white;
+  background: #dfddd7;
   font-size: 16px;
 }
 
@@ -203,61 +204,57 @@ body {
   left: 43.3%;
 }
 
-
 .social-icons {
   position: absolute;
   bottom: 40px; /* или другое значение, в зависимости от вашего макета */
   left: 80px;
   display: flex;
-    width: 28px;
+  width: 28px;
   height: 28px;
   gap: 16px;
-
 }
 
 .social-icons a img {
-
   opacity: 0.7;
   transition: opacity 0.3s;
-
 }
 
 .social-icons a img:hover {
   opacity: 1;
 }
 
+.services-section {
+  max-width: 1920px;
+  background: #dfddd7;
+  margin: 0 auto;
+  padding-top: 150px;
 
-  .services-section {
-      max-width: 1920px;
-      background: #DFDDD7;
-      margin: 0 auto;
-      padding-top: 150px;
-      box-sizing: border-box;
-    }
+  box-sizing: border-box;
+}
 
-    .section-header {
-      margin: 0 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
+.section-header {
+  margin: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
 
-    .section-title {
-      font-size: 50px;
-      font-weight: 500;
-      color: #000;
-    }
+.section-title {
+  font-size: 50px;
+  font-weight: 500;
+  color: #000;
+}
 
-    .view-all {
-      font-size: 14px;
-      text-decoration: none;
-      color: #000;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
+.view-all {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 .grid {
   display: grid;
@@ -271,9 +268,15 @@ body {
 }
 
 /* Верхний ряд */
-.card:nth-child(1) { grid-column: span 3; }
-.card:nth-child(2) { grid-column: span 6; }
-.card:nth-child(3) { grid-column: span 3; }
+.card:nth-child(1) {
+  grid-column: span 3;
+}
+.card:nth-child(2) {
+  grid-column: span 6;
+}
+.card:nth-child(3) {
+  grid-column: span 3;
+}
 
 /* Нижний ряд */
 .card:nth-child(4),
@@ -337,24 +340,17 @@ body {
   flex-shrink: 0;
   transition: filter 0.3s ease;
   filter: none;
- 
 }
-
-
-
-
 
 /* Ховер на карточку: меняем цвет текста и фильтр картинки */
 .card:hover .card-text {
   color: #d3af37;
-
 }
 
 .card:hover .arrow-icon {
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg) saturate(800%) brightness(0.9);
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg)
+    saturate(800%) brightness(0.9);
 }
-
-
 
 .card.highlight .card-text {
   color: #ffdf3e;
@@ -367,8 +363,258 @@ body {
   border-width: 0 2px 2px 0;
   padding: 4px;
   margin-left: 6px;
+}
+
+.signup-section {
+  position: relative;
+
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 140px;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+min-height: 643px;
+  display: flex;
+  justify-content: space-between;
+
+  gap: 40px;
+  align-items: center;
+  color: #fff;
+  margin: 0 80px;
+}
+
+.signup-left {
+  flex: 1;
+  max-width: 450px;
+  position: relative;
+}
+
+.signup-title {
+  font-weight: 900;
+  font-size: 74px;
+  margin: 0 0 20px;
+}
+
+.signup-description {
+  max-width: 662px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ccc;
+font-weight: 400;
+font-size: 15px;
+line-height: 150%;
+
+
 
 }
+
+.signup-description p  {
+  max-width: 662px;
+width: 100%;
+
+
+
+}
+
+.signup-logo {
+  width: 182px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.signup-right {
+  max-width: 946px;
+  width: 100%;
+  min-height:403px ;
+  flex: 1;
+  background: #161616;
+  border-radius: 20px;
+
+  display: flex;
+
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.signup-photo {
+  max-width: 380px;
+
+  object-fit: cover;
+}
+
+.signup-form {
+  margin: 50px 55px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="tel"] {
+  margin-top: 5px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: none;
+border-bottom: 1px solid #FFFFFF26;
+  color: #eee;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.signup-form input[type="text"]::placeholder,
+.signup-form input[type="tel"]::placeholder {
+  color: #555;
+}
+
+.checkbox-label {
+  font-size: 0.8rem;
+  color: #aaa;
+  display: flex;
+  flex-direction: row !important;
+  
+  align-items:start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.signup-form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  appearance: none; /* Убирает стандартный стиль чекбокса */
+  background-color: transparent; /* Прозрачный фон */
+ border: 1px solid #FFFFFF26;
+  border-radius: 4px; /* Скругление (по желанию) */
+  display: inline-block;
+  position: relative;
+}
+
+.signup-form input[type="checkbox"]:checked {
+  background-color: #FFFFFF26; /* или любой нужный тебе цвет */
+}
+.btn-submit {
+  margin-top: 15px;
+  padding: 12px;
+background: linear-gradient(90deg, #FFD701 0%, #998101 100%);
+
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(90deg, #e6c500 0%, #8b6d00 100%);
+}
+
+  .news-section {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    font-family: sans-serif;
+  }
+
+  .news-header {
+    margin: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .news-header h2 {
+font-weight: 500;
+font-size: 50px;
+line-height: 110.00000000000001%;
+letter-spacing: -2%;
+text-transform: uppercase;
+color: #000;
+
+  }
+
+  .news-header a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .news-header a:hover {
+    color: #999;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 422px);
+    column-gap: 24px;
+    row-gap: 60px;
+    justify-content: center;
+  }
+
+  .news-card {
+    
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+
+  .news-card:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+  }
+
+  .news-card img {
+    width: 100%;
+    height: 421px;
+    object-fit: cover;
+      border-radius: 16px;
+  }
+
+  .news-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 16px;
+  }
+
+  .news-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 16px 8px 16px;
+    flex-grow: 1;
+  }
+
+  .news-card a {
+    margin: 0 16px 16px 16px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: underline;
+    align-self: flex-start;
+  }
+
 
 /* Адаптив — планшет */
 @media (max-width: 1024px) {
@@ -404,7 +650,6 @@ body {
     grid-column: span 1 !important;
   }
 }
-
 
 /* Mobile — до 768px */
 @media (max-width: 48rem) {
