@@ -1,0 +1,480 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 16px;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 120rem; /* 1920px */
+  height: 67.25rem; /* 1076px */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero__slider {
+  width: 47.4%;
+  height: 100%;
+  background-color: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.hero__content {
+  width: 52.6%;
+  min-width: 0;
+  padding: 0 3.25rem;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding-top: 306px;
+}
+
+.slider__image {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slider__image:first-child {
+  display: flex;
+}
+
+.slider__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider__pagination {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 3rem;
+  width: 30.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.progress-line {
+  position: relative;
+  height: 0.0625rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 0.0625rem;
+  background: #ffffff4d;
+  border-radius: 1px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.progress-fg-part {
+  position: relative;
+  height: 0.0625rem;
+  background: #ffffff4d;
+  border-radius: 1px;
+  cursor: pointer;
+  z-index: 2;
+  flex-basis: calc(100% / 3);
+  transition: background-color 0.3s ease;
+}
+
+.progress-fg-part.active {
+  background: #d3af37;
+  height: 0.0625rem;
+}
+
+.dots-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__dot {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #ccc;
+  user-select: none;
+}
+
+.slider__dot.active {
+  color: #d3af37;
+}
+
+.line-text {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.hero__content p {
+  max-width: 36rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.button {
+  all: unset;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.5rem;
+  height: 3.25rem;
+  margin-top: 1.25rem;
+  box-shadow: 0 0.25rem 1.4rem rgba(255, 215, 1, 0.15);
+  background: linear-gradient(90deg, #ffd701 0%, #998101 100%);
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.highlight {
+  color: #d3af37;
+}
+
+.absolute-photo {
+  box-sizing: border-box;
+  position: absolute;
+  width: 16.875rem;
+  height: auto;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+  border: 1rem solid #161616;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.absolute-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+.photoA {
+  top: 2.78%;
+  left: 35.35%;
+}
+
+.photoB {
+  bottom: 12.2%;
+  left: 43.3%;
+}
+
+
+.social-icons {
+  position: absolute;
+  bottom: 40px; /* или другое значение, в зависимости от вашего макета */
+  left: 80px;
+  display: flex;
+    width: 28px;
+  height: 28px;
+  gap: 16px;
+
+}
+
+.social-icons a img {
+
+  opacity: 0.7;
+  transition: opacity 0.3s;
+
+}
+
+.social-icons a img:hover {
+  opacity: 1;
+}
+
+
+  .services-section {
+      max-width: 1920px;
+      background: #DFDDD7;
+      margin: 0 auto;
+      padding-top: 150px;
+      box-sizing: border-box;
+    }
+
+    .section-header {
+      margin: 0 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 50px;
+      font-weight: 500;
+      color: #000;
+    }
+
+    .view-all {
+      font-size: 14px;
+      text-decoration: none;
+      color: #000;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  max-width: 1920px;
+  margin: 0 80px;
+  box-sizing: border-box;
+  grid-auto-rows: 1fr;
+  aspect-ratio: unset;
+}
+
+/* Верхний ряд */
+.card:nth-child(1) { grid-column: span 3; }
+.card:nth-child(2) { grid-column: span 6; }
+.card:nth-child(3) { grid-column: span 3; }
+
+/* Нижний ряд */
+.card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(6),
+.card:nth-child(7) {
+  grid-column: span 3;
+}
+
+/* Общие стили карточек */
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  min-height: 0; /* предотвращает растягивание */
+  aspect-ratio: unset; /* убираем квадратность */
+}
+
+/* У всех — фиксированная высота */
+.grid {
+  grid-auto-rows: 360px; /* например, как 421px / 1920 масштабировано */
+}
+
+/* Если всё же хотите, чтобы остальные карточки были квадратами, можно вот так: */
+.card:not(:nth-child(2)) {
+  aspect-ratio: 1 / 1;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-text {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.arrow-icon {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: filter 0.3s ease;
+  filter: none;
+ 
+}
+
+
+
+
+
+/* Ховер на карточку: меняем цвет текста и фильтр картинки */
+.card:hover .card-text {
+  color: #d3af37;
+
+}
+
+.card:hover .arrow-icon {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg) saturate(800%) brightness(0.9);
+}
+
+
+
+.card.highlight .card-text {
+  color: #ffdf3e;
+}
+
+.arrow {
+  display: inline-block;
+  transform: rotate(-45deg);
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  margin-left: 6px;
+
+}
+
+/* Адаптив — планшет */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 300px;
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(3),
+  .card:nth-child(4),
+  .card:nth-child(5),
+  .card:nth-child(6),
+  .card:nth-child(7) {
+    grid-column: span 3;
+  }
+
+  .card:nth-child(2) {
+    grid-column: span 6;
+  }
+}
+
+/* Адаптив — мобилка */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0 20px;
+    grid-auto-rows: 300px;
+  }
+
+  .card {
+    grid-column: span 1 !important;
+  }
+}
+
+
+/* Mobile — до 768px */
+@media (max-width: 48rem) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero__slider {
+    width: 100%;
+    height: 18.75rem;
+  }
+
+  .slider__pagination {
+    right: 2.5rem;
+    width: 90%;
+  }
+
+  .hero__content {
+    padding: 6.25rem 2.5rem;
+    width: 100%;
+  }
+
+  .absolute-photo {
+    display: none;
+  }
+}
+
+/* Планшеты: до 1024px */
+@media (max-width: 64rem) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .hero__slider {
+    width: 100%;
+    height: 25rem;
+  }
+
+  .hero__content {
+    width: 100%;
+    padding: 5rem 3rem;
+  }
+
+  .slider__pagination {
+    right: 3rem;
+    width: 80%;
+  }
+
+  .absolute-photo {
+    display: none;
+  }
+}
+
+/* Десктопы и ноутбуки до 1366px */
+@media (max-width: 85.375rem) {
+  .hero {
+    flex-direction: row;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hero__content {
+    width: 52%;
+    padding: 4rem 3rem 6rem 3rem;
+  }
+
+  .absolute-photo {
+    display: none;
+  }
+}
