@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YEEZY SALON</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
@@ -26,17 +28,18 @@
         </div>
       </div>
 
-      <div class="hero__slider">
-        <div class="slider__image" data-index="0">
-          <img src="/images/slider1.png" alt="Фото 1" style="width: 100%; height: 100%; object-fit: cover" />
-        </div>
-        <div class="slider__image" data-index="1" style="display: none">
-          <img src="/images/slider2.jpg" alt="Фото 2" style="width: 100%; height: 100%; object-fit: cover" />
-        </div>
-        <div class="slider__image" data-index="2" style="display: none">
-          <img src="/images/slider3.jpg" alt="Фото 3" style="width: 100%; height: 100%; object-fit: cover" />
-        </div>
-      </div>
+<div class="hero__slider">
+  <div class="slider__image" data-index="0">
+    <img src="/images/slider1.png" alt="Фото 1" />
+  </div>
+  <div class="slider__image hidden" data-index="1">
+    <img src="/images/slider2.jpg" alt="Фото 2" />
+  </div>
+  <div class="slider__image hidden" data-index="2">
+    <img src="/images/slider3.jpg" alt="Фото 3" />
+  </div>
+</div>
+
 
       <div class="slider__pagination">
         <div class="progress-line">
@@ -54,6 +57,10 @@
     </section>
 
     <section class="services-section">
+        <div class="news-header">
+    <h2>Послуги і ціни</h2>
+    <a href="#">Дивитись всі послуги →</a>
+  </div>
       <div class="grid">
         <div class="card">
           <img src="images/services/color.png" alt="Фарбування волосся" />
@@ -103,16 +110,182 @@
           </div>
         </div>
 
-        <div class="card">
-          <img src="images/services/makeup.png" alt="Макіяж" />
-          <div class="card-text">
-            Макіяж
-            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
-          </div>
-        </div>
+    <div class="card">
+      <img src="images/services/makeup.png" alt="Макіяж">
+      <div class="card-text">
+        Макіяж
+        <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
       </div>
-    </section>
+    </div>
+
+</section>
+
+<section class="signup-section">
+  <div class="container">
+    <div class="signup-left">
+      <h2 class="signup-title">ЗАПИСАТИСЬ</h2>
+      <div class="signup-description">
+        <img class="signup-logo" src="/images/brand.png" alt="YEEZY logo" />
+        <p>
+          Залиште заявку, щоб записатися на зручний для вас час — наші майстри зв’яжуться з вами найближчим часом. Довірте свою красу професіоналам!
+        </p>
+      </div>
+
+    </div>
+    <div class="signup-right">
+      <img class="signup-photo" src="/images/signingirl.png" alt="Woman" />
+      <form class="signup-form">
+        <label>
+          ВАШЕ ІМ'Я
+          <input type="text" name="name" placeholder="Введіть ім'я" />
+        </label>
+        <label>
+          ТЕЛЕФОН
+          <input type="tel" name="phone" placeholder="+380 XX XXX XX XX" />
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="new-client" />
+          Я новий клієнт
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="regular-client" />
+          Я постійний клієнт
+        </label>
+        <button type="submit" class="btn-submit">ЗАПИСАТИСЬ</button>
+      </form>
+    </div>
+  </div>
+  <div class="social-icons">
+  <a href="#"><img src="/images/icons/3.svg" alt="Instagram" /></a>
+  <a href="#"><img src="/images/icons/2.svg" alt="TikTok" /></a>
+  <a href="#"><img src="/images/icons/1.svg" alt="Facebook" /></a>
+</div>
+</section>
+
+<section class="news-section">
+  <div class="news-header">
+    <h2>НОВИНИ І ПОРАДИ</h2>
+    <a href="#">Дивитись всі новини →</a>
+  </div>
+
+  <div class="news-grid">
+    <!-- 8 карточек -->
+    <div class="news-card">
+      <img src="/images/newsphoto1.png" alt="Стрижка волосся" />
+      <h3>Стрижка волосся</h3>
+      <p>One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+      <a href="#">Детальніше</a>
+    </div>
+    <div class="news-card">
+      <img src="/images/newsphoto2.png" alt="Тонування блонду" />
+      <h3>Тонування блонду</h3>
+      <p>Ті, хто хоч раз фарбувався в блондинку знає, як, коли волосся швидко жовтіє, а фарбувати часто – шкода. Тому і винайшли відтінкові</p>
+      <a href="#">Детальніше</a>
+    </div>
+    <div class="news-card">
+      <img src="/images/newsphoto3.png" alt="Правда про стайлер dyson" />
+      <h3>Правда про стайлер dyson</h3>
+      <p>One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+      <a href="#">Детальніше</a>
+    </div>
+    <div class="news-card">
+      <img src="/images/newsphoto4.png" alt="Не поспішайте обрізати волосся" />
+      <h3>Не поспішайте обрізати волосся</h3>
+      <p>One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+      <a href="#">Детальніше</a>
+    </div>
+    <div class="news-card">
+      <img src="/images/newsphoto5.png" alt="Абсолютне щастя для волосся" />
+      <h3>Абсолютне щастя для волосся — абсолютне щастя для вас</h3>
+      <p>Ця японська програма відновлює волосся за рахунок дії 12 високоефективних продуктів, які наносяться у чіткій послідовності. Перші три...</p>
+      <a href="#">Детальніше</a>
+    </div>
+    <div class="news-card">
+      <img src="/images/newsphoto6.png" alt="Топ масок YEEZY" />
+      <h3>Топ улюблених масок для волосся від стилістів YEEZY</h3>
+      <p>Отже, перша Signature Moisture Masgue від Oribe. Зволожує, живить, захищає від сухості та руйнування кольору, забезпечує гладкість...</p>
+      <a href="#">Детальніше</a>
+    </div>
+    <div class="news-card">
+      <img src="/images/newsphoto7.png" alt="Мультифункціональний засіб" />
+      <h3>Чи мріяли ви колись про мультифункціональний засіб</h3>
+      <p>One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд...</p>
+      <a href="#">Детальніше</a>
+    </div>
+    <div class="news-card">
+      <img src="/images/newsphoto8.png" alt="Не обрізайте волосся" />
+      <h3>Не поспішайте обрізати волосся</h3>
+      <p>One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+      <a href="#">Детальніше</a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+<div class="about__image-block">
+  <div class="about__image-inner">
+    <img src="/images/about.png" alt="YEEZY Salon" class="about__image" />
+       <div class="about__image-title">
+      <h2>ПРО YEEZY</h2>
+    </div>
+
+           <div class="about__image-p">
+      <p><span class="highlight">YEEZY </span>- проєкт, який змінює звичний погляд на салони краси. Це синтез інтелектуальних та стильних людей, які звикли до якості, сервісу та не готові на жодні beauty-компроміси.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+ <div class="faq-container">
+ 
+
+    <div class="faq-item">
+      <div class="faq-question">Салон краси, у якому ви можете не перейматися за результат</div>
+      <div class="faq-answer">
+        <span>Шукаючи салони краси в Києві, ви прагнете, щоб сподівання щодо майбутнього образу виправдалися? У такому разі звертайте увагу на професіоналізм майстрів та якість б’юті-продукції. Саме про це — YEEZY Salon. Ми надаємо послуги, спираючись на експертність, та користуємося преміальними засобами від світових брендів.</span>
+     <span>Наші салони краси — мережа, на будь-якій локації якої ви будете почуватися максимально упевнено та затишно. Попри складність запиту, із яким звертаєтеся, можете бути певні, що майстри утілять це якнайкраще.</span>
+           <span>Салон краси вирізняється топовим сервісом. Вам лишається тільки обрати послугу, прийти на визначений час та із комфортом розміститися в кріслі. Відпочивайте, розслабляйтеся та мрійте, поки наші спеціалісти будуть «чаклувати» над довершеністю вашого образу.</span>
+    </div>
+    </div>
+
+
+
+        <div class="faq-item">
+      <div class="faq-question">Салон краси, у якому ви можете не перейматися за результат</div>
+      <div class="faq-answer">
+        <span>YEEZY Salon — насамперед про яскраві особистості, які «горять» своєю справою. У нашому закладі немає новачків, тож застосування відшліфованих до бездоганності сучасних технік — буденність, у якій ми працюємо щодень. На додачу, якщо переглядаєте та шукаєте салони краси, де можна отримати будь-яку із beauty-послуг, обирайте YEEZY, адже наш простір — «all-in-one». Ви можете потурбуватися про:
+          <ul>
+  <li>нігті;</li>
+  <li>брови та вії;</li>
+  <li>волосся.</li>
+</ul>
+        </span>
+     <span>Нігтьовий сервіс — це водночас догляд і надання стильного вигляду. Робимо всі процедури: від манікюру, педикюру до нарощування. Довершеність образу забезпечать виразні вії та брови, для яких можна замовити послугу ламінування, ботоксу, фарбування, корекції.</span>
+           <span>Наш салон краси надає послугу фарбування волосся в найскладніших техніках — airtouch, shatush, balayage. Скажіть, яким бачите майбутній тон і ми його втілимо. Завдяки досвідченості колористів та використанню якісних фарбників із перевіреним складом, результат приголомшуватиме відтінком та блиском локонів.</span>
+           <span>YEEZY Salon — це також можливість зробити стрижку ідеальної довжини. Майстер візьме до уваги ваше бачення і на додачу, помиє та помасажує голову — релаксуйте під час перевтілення. Завершальний штрих — ідеальна укладка. Замовити в нашому салон краси в Києві укладання волосся можна окремо — без стрижки. Незалежно від того, потрібна укладка на вечірку, фотосесію чи весілля, результат буде неймовірним.</span>
+           <span>Прайс салону краси містить доглядові послуги за волоссям. Насичення корисними компонентами та глибоке відновлення структури наповнить локони здоров’ям і міццю, воно радуватиме густотою та блиском. Ефект від салонного догляду помітний уже після першої процедури.</span>
+           <span>Замовте послугу макіяжу для буднів та особливих подій. Стиліст зробить мейкап, який максимально вам личитиме та акцентуватиметься на ваших перевагах.</span>
+           
+    </div>
+    </div>
+
+            <div class="faq-item">
+      <div class="faq-question">Салон краси в Києві: зробіть онлайн-замовлення</div>
+      <div class="faq-answer">
+        <span>YEEZY Salon — місце, де вам непотрібно перейматися не лише за результат, а й за якість засобів. Гіпоалергенні компоненти та використання сучасних розробок індустрії забезпечує безпечність та стійкість ефекту впродовж потрібного часу.</span>
+     <span>Прейскурант цін салону краси — доступний. На додачу, під час послуги ви можете запитати та отримати професійні рекомендації щодо особливостей щоденного догляду тощо. Також у магазині можна придбати продукцію. Можливе надання послуги кількома майстрами для економії часу.</span>
+           <span>Наш салон краси відкритий щодня. Для запису, у тому числі на попередні консультації щодо фарбування, укладання чи інших послуг, достатньо внести інформацію в онайн-форму. Якщо у вас залишилися питання, можете зателефонувати за вказаним номером.</span>
+    </div>
+    </div>
+  
+  </div>
+ 
+</section>
+
+
 
     <script src="js/script.js"></script>
+
   </body>
 </html>

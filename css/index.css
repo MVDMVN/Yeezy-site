@@ -1,7 +1,9 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
   color: white;
+  background: #dfddd7;
   font-size: 16px;
 }
 
@@ -203,61 +205,57 @@ body {
   left: 43.3%;
 }
 
-
 .social-icons {
   position: absolute;
   bottom: 40px; /* или другое значение, в зависимости от вашего макета */
   left: 80px;
   display: flex;
-    width: 28px;
+  width: 28px;
   height: 28px;
   gap: 16px;
-
 }
 
 .social-icons a img {
-
   opacity: 0.7;
   transition: opacity 0.3s;
-
 }
 
 .social-icons a img:hover {
   opacity: 1;
 }
 
+.services-section {
+  max-width: 1920px;
+  background: #dfddd7;
+  margin: 0 auto;
+  padding-top: 100px;
 
-  .services-section {
-      max-width: 1920px;
-      background: #DFDDD7;
-      margin: 0 auto;
-      padding-top: 150px;
-      box-sizing: border-box;
-    }
+  box-sizing: border-box;
+}
 
-    .section-header {
-      margin: 0 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
+.section-header {
+  margin: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
 
-    .section-title {
-      font-size: 50px;
-      font-weight: 500;
-      color: #000;
-    }
+.section-title {
+  font-size: 50px;
+  font-weight: 500;
+  color: #000;
+}
 
-    .view-all {
-      font-size: 14px;
-      text-decoration: none;
-      color: #000;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
+.view-all {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 .grid {
   display: grid;
@@ -271,9 +269,15 @@ body {
 }
 
 /* Верхний ряд */
-.card:nth-child(1) { grid-column: span 3; }
-.card:nth-child(2) { grid-column: span 6; }
-.card:nth-child(3) { grid-column: span 3; }
+.card:nth-child(1) {
+  grid-column: span 3;
+}
+.card:nth-child(2) {
+  grid-column: span 6;
+}
+.card:nth-child(3) {
+  grid-column: span 3;
+}
 
 /* Нижний ряд */
 .card:nth-child(4),
@@ -337,24 +341,17 @@ body {
   flex-shrink: 0;
   transition: filter 0.3s ease;
   filter: none;
- 
 }
-
-
-
-
 
 /* Ховер на карточку: меняем цвет текста и фильтр картинки */
 .card:hover .card-text {
   color: #d3af37;
-
 }
 
 .card:hover .arrow-icon {
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg) saturate(800%) brightness(0.9);
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg)
+    saturate(800%) brightness(0.9);
 }
-
-
 
 .card.highlight .card-text {
   color: #ffdf3e;
@@ -367,114 +364,677 @@ body {
   border-width: 0 2px 2px 0;
   padding: 4px;
   margin-left: 6px;
-
 }
 
-/* Адаптив — планшет */
+.signup-section {
+  position: relative;
+
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 140px;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  min-height: 643px;
+  display: flex;
+  justify-content: space-between;
+
+  gap: 40px;
+  align-items: center;
+  color: #fff;
+  margin: 0 80px;
+}
+
+.signup-left {
+  flex: 1;
+  max-width: 450px;
+  position: relative;
+}
+
+.signup-title {
+  font-weight: 900;
+  font-size: 74px;
+  margin: 0 0 20px;
+}
+
+.signup-description {
+  max-width: 662px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ccc;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.signup-description p {
+  max-width: 662px;
+  width: 100%;
+}
+
+.signup-logo {
+  width: 182px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.signup-right {
+  max-width: 946px;
+  width: 100%;
+  min-height: 403px;
+  flex: 1;
+  background: #161616;
+  border-radius: 20px;
+
+  display: flex;
+
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.signup-photo {
+  max-width: 380px;
+
+  object-fit: cover;
+}
+
+.signup-form {
+  margin: 50px 55px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="tel"] {
+  margin-top: 5px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff26;
+  color: #eee;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.signup-form input[type="text"]::placeholder,
+.signup-form input[type="tel"]::placeholder {
+  color: #555;
+}
+
+.checkbox-label {
+  font-size: 0.8rem;
+  color: #aaa;
+  display: flex;
+  flex-direction: row !important;
+
+  align-items: start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.signup-form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  appearance: none; /* Убирает стандартный стиль чекбокса */
+  background-color: transparent; /* Прозрачный фон */
+  border: 1px solid #ffffff26;
+  border-radius: 4px; /* Скругление (по желанию) */
+  display: inline-block;
+  position: relative;
+}
+
+.signup-form input[type="checkbox"]:checked {
+  background-color: #ffffff26; /* или любой нужный тебе цвет */
+}
+.btn-submit {
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(90deg, #ffd701 0%, #998101 100%);
+
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(90deg, #e6c500 0%, #8b6d00 100%);
+}
+
+.news-section {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.news-header {
+  margin: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.news-header h2 {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 110.00000000000001%;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.news-header a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.news-header a:hover {
+  color: #999;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 422px);
+  column-gap: 24px;
+  row-gap: 60px;
+  justify-content: center;
+  margin-bottom: 140px;
+}
+
+.news-card {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.news-card img {
+  width: 100%;
+  height: 421px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.news-card h3 {
+  padding: 0;
+  margin: 24px 0 8px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #000;
+}
+
+.news-card p {
+  color: #000;
+
+  flex-grow: 1;
+
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0;
+  vertical-align: middle;
+  margin: 0 0 16px;
+}
+
+.news-card a {
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  align-self: flex-start;
+  margin: 6px;
+  font-weight: 500;
+}
+
+.about {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 40px 0;
+  gap: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about__image-block {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1920px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+
+  padding: 0 80px;
+}
+
+.about__image-inner {
+  box-sizing: border-box;
+}
+
+.about__image {
+  position: relative;
+  width: 100%;
+  height: 489px;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px;
+}
+
+.about__image-title {
+  position: absolute;
+  top: 49px;
+  left: 131px;
+  background: transparent;
+}
+
+.about__image-title h2 {
+  color: #ffd701;
+
+  font-weight: 700;
+
+  font-size: 50px;
+
+  text-transform: uppercase;
+}
+
+.about__image-p {
+  position: absolute;
+  bottom: 49px;
+  right: 123px;
+  max-width: 441px;
+
+  font-weight: 400;
+
+  font-size: 15px;
+}
+
+.about__content {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.about__block h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.about__block p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.faq-container {
+  max-width: 1920px;
+  width: 100%; /* строго 1920 */
+  margin: 0 auto; /* центрируем на странице */
+  padding: 0 80px; /* внутренние отступы слева и справа */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* включает padding в общую ширину */
+}
+
+.faq-question {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  max-width: 520px;
+}
+
+.faq-answer {
+  display: flex;
+  flex-direction: column;
+  max-width: 865px;
+  gap: 30px;
+}
+
+.faq-answer span {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffffcc;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.map-section {
+  display: flex;
+  flex-direction: row;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* Планшеты: ширина до 1024px */
 @media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero__content {
+    width: 100%;
+    height: auto;
+    padding: 24px 16px;
+  }
+
+  .hero__slider {
+    width: 100%;
+    height: auto;
+  }
+
+  .line-text {
+    font-size: 2.5rem;
+  }
+
+  .slider__pagination {
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 24px;
+    gap: 8px;
+  }
+
+  .slider__dot {
+    font-weight: 700;
+    font-size: 12.97px;
+
+    line-height: 24px;
+  }
+  .progress-line {
+    width: 100%;
+  }
+  .dots-row {
+    width: 100%;
+  }
+
+  .absolute-photo {
+    display: none;
+  }
+
+  .services-section {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  }
+
   .grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 300px;
+    gap: 16px;
   }
 
   .card:nth-child(1),
+  .card:nth-child(2),
   .card:nth-child(3),
   .card:nth-child(4),
   .card:nth-child(5),
   .card:nth-child(6),
   .card:nth-child(7) {
-    grid-column: span 3;
-  }
-
-  .card:nth-child(2) {
     grid-column: span 6;
   }
-}
 
-/* Адаптив — мобилка */
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .signup-title {
+    font-size: 48px;
+  }
+
+  .signup-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
     margin: 0 20px;
-    grid-auto-rows: 300px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+  }
+
+  .about__image-title h2 {
+    font-size: 36px;
+  }
+
+  .about__image-p {
+    font-size: 13px;
+    right: 20px;
+  }
+
+  .faq-question {
+    font-size: 22px;
+  }
+
+
+  
+  .grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 16px;
   }
 
   .card {
-    grid-column: span 1 !important;
-  }
-}
-
-
-/* Mobile — до 768px */
-@media (max-width: 48rem) {
-  .hero {
-    flex-direction: column;
-    height: auto;
+    flex: 0 0 auto;
+    width: 194px; /* или нужная ширина карточки */
+    height: 265px;
+    scroll-snap-align: start;
   }
 
-  .hero__slider {
-    width: 100%;
-    height: 18.75rem;
-  }
 
-  .slider__pagination {
-    right: 2.5rem;
-    width: 90%;
+
+/* Мобильные: до 768px */
+@media (max-width: 768px) {
+  .line-text {
+    font-size: 2rem;
   }
 
   .hero__content {
-    padding: 6.25rem 2.5rem;
-    width: 100%;
-  }
-
-  .absolute-photo {
-    display: none;
-  }
-}
-
-/* Планшеты: до 1024px */
-@media (max-width: 64rem) {
-  .hero {
-    flex-direction: column;
-    height: auto;
-    max-width: 100%;
-  }
-
-  .hero__slider {
-    width: 100%;
-    height: 25rem;
-  }
-
-  .hero__content {
-    width: 100%;
-    padding: 5rem 3rem;
+    padding-top: 160px;
   }
 
   .slider__pagination {
-    right: 3rem;
-    width: 80%;
-  }
-
-  .absolute-photo {
-    display: none;
-  }
-}
-
-/* Десктопы и ноутбуки до 1366px */
-@media (max-width: 85.375rem) {
-  .hero {
+    bottom: 0.75rem;
+    right: 1rem;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .news-header {
+    margin: 0 18px;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .news-header h2 {
+    font-weight: 500;
+
+    font-size: 32px;
+
+    text-transform: uppercase;
+  }
+
+  .news-header a {
+    font-weight: 500;
+
+    font-size: 16px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .signup-title {
+    font-size: 36px;
+  }
+
+  .signup-form {
+    margin: 20px;
+  }
+
+  .signup-photo {
+ 
+  }
+
+    .signup-right{
+display: flex;
+flex-direction: column;
+
+}
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card img {
+    height: 240px;
+  }
+
+  .section-title,
+  .news-header h2 {
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about__image {
+    height: 240px;
+  }
+
+  .about__image-title h2 {
+    font-size: 28px;
+  }
+
+  .about__image-title {
+    top: 20px;
+    left: 20px;
+  }
+
+  .about__image-p {
+    font-size: 12px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .faq-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-answer {
     max-width: 100%;
+  }
+
+  .social-icons {
+    position: static;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    margin-top: 58px;
+    width: 100%;
     height: auto;
   }
 
-  .hero__content {
-    width: 52%;
-    padding: 4rem 3rem 6rem 3rem;
+  .social-icons a img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    float: l;
   }
 
-  .absolute-photo {
-    display: none;
+  .social-icons a img:hover {
+    opacity: 1;
   }
+
+  .slider__image {
+    height: 301px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider__image img {
+    max-height: 100%;
+    max-width: 100%;
+
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.photoA,
+.photoB {
+  position: static;
+  margin: 10px auto;
+}
+
+.absolute-photo {
+  display: none;
+}
+
+.slider__dot {
+  font-size: 0.625rem;
 }
