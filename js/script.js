@@ -31,3 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   goToSlide(0);
 });
+
+
+
+ 
