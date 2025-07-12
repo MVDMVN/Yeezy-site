@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/first-section.css" />
+    <link rel="stylesheet" href="css/news.css" />
   </head>
   <body>
     <header class="site-header">
@@ -17,14 +18,12 @@
           <img src="images/logo.png" alt="Logo image" />
         </a>
 
-        <!-- Бургер-кнопка для мобилок -->
         <button class="menu-toggle" aria-label="Открыть меню">
           <span class="menu-toggle__bar"></span>
           <span class="menu-toggle__bar"></span>
           <span class="menu-toggle__bar"></span>
         </button>
 
-        <!-- Десктоп-навигация -->
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li><a href="#" class="main-nav__link">ГОЛОВНА</a></li>
@@ -71,7 +70,6 @@
           </ul>
         </nav>
         <div class="mobile-menu__socials">
-          <!-- иконки соцсетей через спрайт или svg -->
           <a href="#" class="social-icon social-icon--insta"></a>
           <a href="#" class="social-icon social-icon--tiktok"></a>
           <a href="#" class="social-icon social-icon--fb"></a>
@@ -80,7 +78,6 @@
       </div>
     </aside>
 
-    <!-- Hero-секция -->
     <section class="page-hero" style="background-image: url('images/news-header.jpg')">
       <div class="container-links">
         <nav class="breadcrumb">
@@ -92,15 +89,158 @@
       </div>
     </section>
 
-    <!-- остаток страницы... -->
+    <section class="news-list">
+      <div class="news-container">
+        <h2 class="news-title">Новини і поради</h2>
+        <div class="news-wrapper">
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image-2.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image-3.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image-4.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image-2.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image-3.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+          <div class="news-item">
+            <img class="news-item-image" src="images/news/news-image-4.png" alt="News block image" />
+            <p class="news-item-title">Стріжка волосся</p>
+            <p class="news-item-text">One United Elixir зміцнює волосся, захищає його від вологи, впливів термоінструментів та навколишнього середовища, покращує вигляд</p>
+            <a href="#" class="news-item-link">Детальніше</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-section">
+      <div class="top-container">
+        <!-- 1) Кнопки-вкладки -->
+        <div class="tabs__buttons">
+          <button class="tabs__button active" data-tab="1">Топ записи</button>
+          <button class="tabs__button" data-tab="2">ТОП Меню</button>
+          <button class="tabs__button" data-tab="3">ТОП Послуги</button>
+        </div>
+
+        <!-- 2) Контейнер для трёх панелей -->
+        <div class="tabs__content">
+          <!-- Вкладка 1 -->
+          <div class="tabs__pane active" data-tab="1">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Манікюр гель лаком ціна</a></li>
+              <li><a href="#">Корекція брів</a></li>
+              <li><a href="#">Укладка</a></li>
+              <li><a href="#">Макіяж для дівча</a></li>
+              <li><a href="#">Чубчик стрижка</a></li>
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+            </ul>
+          </div>
+
+          <!-- Вкладка 2 -->
+          <div class="tabs__pane" data-tab="2">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+            </ul>
+          </div>
+
+          <!-- Вкладка 3 -->
+          <div class="tabs__pane" data-tab="3">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Манікюр гель лаком ціна</a></li>
+              <li><a href="#">Корекція брів</a></li>
+              <li><a href="#">Укладка</a></li>
+              <li><a href="#">Макіяж для дівча</a></li>
+              <li><a href="#">Чубчик стрижка</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script>
-      // Простая логика открытия/закрытия моб. меню
       document.addEventListener("DOMContentLoaded", () => {
         const toggle = document.querySelector(".menu-toggle");
         const mobileMenu = document.querySelector(".mobile-menu");
         const closeBtn = document.querySelector(".mobile-menu__close");
         const sublinkBtn = document.querySelector(".mobile-menu__sublink");
+
+        const btns = document.querySelectorAll(".tabs__button");
+        const panes = document.querySelectorAll(".tabs__pane");
 
         function openMenu() {
           mobileMenu.setAttribute("aria-hidden", "false");
@@ -124,6 +264,18 @@
             const parentLi = btn.closest(".mobile-menu__item--has-submenu");
             if (!parentLi) return;
             parentLi.classList.toggle("open");
+          });
+        });
+
+        btns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const id = btn.getAttribute("data-tab");
+            // 1) сброс всех
+            btns.forEach((b) => b.classList.remove("active"));
+            panes.forEach((p) => p.classList.remove("active"));
+            // 2) активируем нужные
+            btn.classList.add("active");
+            document.querySelector(`.tabs__pane[data-tab="${id}"]`).classList.add("active");
           });
         });
       });
