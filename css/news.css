@@ -128,6 +128,7 @@ img {
 .tabs__list a {
   color: rgba(0, 0, 0, 1);
   transition: 0.3s all;
+  text-decoration: none;
 }
 
 .tabs__list a:hover {
