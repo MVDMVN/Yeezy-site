@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/first-section.css" />
-    <link rel="stylesheet" href="css/salons.css" />
+    <link rel="stylesheet" href="css/salon.css" />
     <link rel="stylesheet" href="css/tops.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
@@ -93,104 +93,23 @@
       </div>
     </section>
 
-    <section class="salons">
-      <div class="salon-container salon__inner">
-        <div class="salon__content">
-          <div class="salon-content-wrapper">
-            <h2 class="salon__title">YEEZY SALON IVASUKA</h2>
-            <p class="salon__subtitle">Beauty-простір, де краса зустрічається з гармонією</p>
-            <a href="#" class="btn btn--yellow salon__btn">Детальніше</a>
-          </div>
-          <div class="salon__address">
-            <img src="images/icons/location-icon.png" alt="Location icon" />
-            <span>просп. Володимира Івасюка, 4, корпус 3</span>
-          </div>
-        </div>
+    <section class="contact-map-section">
+      <div class="contact-map-section__info">
+        <h3>Години роботи</h3>
+        <p><i class="icon-pin"></i> Пн–Нд: 09:00 – 21:00</p>
 
-        <div class="salon__media">
-          <div class="salon__image-wrapper">
-            <img src="images/salons/salon-1.jpg" alt="Yeezy Salon Ivasuka" />
-          </div>
-        </div>
-      </div>
-      <div class="salon-container salon__inner">
-        <div class="salon__content">
-          <div class="salon-content-wrapper">
-            <h2 class="salon__title">YEEZY SALON DNIPRO NABEREZHNA</h2>
-            <p class="salon__subtitle">Beauty-простір на дніпровській набережній – місце, де народжується краса та гармонія</p>
-            <a href="#" class="btn btn--yellow salon__btn">Детальніше</a>
-          </div>
-          <div class="salon__address">
-            <img src="images/icons/location-icon.png" alt="Location icon" />
-            <span>вул.Дніпровська набережна, 14А</span>
-          </div>
-        </div>
+        <h3>Адреса</h3>
+        <p><i class="icon-pin"></i> пр. Володимира Івасюка, 4, корпус 3</p>
 
-        <div class="salon__media">
-          <div class="salon__image-wrapper">
-            <img src="images/salons/salon-2.jpg" alt="Yeezy Salon Ivasuka" />
-          </div>
-        </div>
-      </div>
-      <div class="salon-container salon__inner">
-        <div class="salon__content">
-          <div class="salon-content-wrapper">
-            <h2 class="salon__title">YEEZY SALON SOFIYVSKA SQUARE</h2>
-            <p class="salon__subtitle">Величезний розкішний beauty-простір в історичному центрі Києва</p>
-            <a href="#" class="btn btn--yellow salon__btn">Детальніше</a>
-          </div>
-          <div class="salon__address">
-            <img src="images/icons/location-icon.png" alt="Location icon" />
-            <span>вул. Велика Житомирська, 8а</span>
-          </div>
-        </div>
+        <h3>Телефон</h3>
+        <p><i class="icon-phone"></i> <a href="tel:+380638585085">+380 63 858 50 85</a></p>
 
-        <div class="salon__media">
-          <div class="salon__image-wrapper">
-            <img src="images/salons/salon-3.jpg" alt="Yeezy Salon Ivasuka" />
-          </div>
+        <div class="contact-map-section__photo">
+          <img src="path/to/photo.jpg" alt="Вхід до салону Yeezy" />
         </div>
       </div>
 
-      <div class="salon-container salon__inner">
-        <div class="salon__content">
-          <div class="salon-content-wrapper">
-            <h2 class="salon__title">YEEZY SALON LIPKI</h2>
-            <p class="salon__subtitle">Місце, де ваша краса набуває нового вираження і де ви почуваєте себе особливою. </p>
-            <a href="#" class="btn btn--yellow salon__btn">Детальніше</a>
-          </div>
-          <div class="salon__address">
-            <img src="images/icons/location-icon.png" alt="Location icon" />
-            <span>вул. Андрія Верхогляда, 11</span>
-          </div>
-        </div>
-
-        <div class="salon__media">
-          <div class="salon__image-wrapper">
-            <img src="images/salons/salon-4.jpg" alt="Yeezy Salon Ivasuka" />
-          </div>
-        </div>
-      </div>
-
-      <div class="salon-container salon__inner">
-        <div class="salon__content">
-          <div class="salon-content-wrapper">
-            <h2 class="salon__title">YEEZY SALON ANTONOVICHA</h2>
-            <p class="salon__subtitle">Beauty-простір у самому центрі Києва </p>
-            <a href="#" class="btn btn--yellow salon__btn">Детальніше</a>
-          </div>
-          <div class="salon__address">
-            <img src="images/icons/location-icon.png" alt="Location icon" />
-            <span>вул. Андрія Верхогляда, 11</span>
-          </div>
-        </div>
-
-        <div class="salon__media">
-          <div class="salon__image-wrapper">
-            <img src="images/salons/salon-5.jpg" alt="Yeezy Salon Ivasuka" />
-          </div>
-        </div>
-      </div>
+      <div id="map" class="contact-map-section__map"></div>
     </section>
 
     <section class="top-section">
@@ -362,6 +281,61 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    <script>
+      function initMap() {
+        const center = { lat: 50.4333, lng: 30.5167 }; // ваши координаты
+
+        // Пример «dark» стиля (взято из Snazzy Maps)
+        const darkStyle = [
+          { elementType: "geometry", stylers: [{ color: "#1f1f1f" }] },
+          { elementType: "labels.text.stroke", stylers: [{ color: "#1f1f1f" }] },
+          { elementType: "labels.text.fill", stylers: [{ color: "#8f8f8f" }] },
+          {
+            featureType: "poi",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#666666" }],
+          },
+          {
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [{ color: "#2c2c2c" }],
+          },
+          {
+            featureType: "transit",
+            elementType: "geometry",
+            stylers: [{ color: "#2c2c2c" }],
+          },
+          {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [{ color: "#0e0e0e" }],
+          },
+          // …добавьте другие правила по вкусу
+        ];
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center,
+          zoom: 14,
+          styles: darkStyle,
+          disableDefaultUI: true, // убираем лишние контролы
+        });
+
+        new google.maps.Marker({
+          position: center,
+          map,
+          icon: {
+            path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+            scale: 5,
+            fillColor: "#ffbe00",
+            fillOpacity: 1,
+            strokeWeight: 0,
+          },
+        });
+      }
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
