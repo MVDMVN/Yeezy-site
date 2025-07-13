@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(0, 0, 0, 1);
+  background-color: #ecebe9;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+.salon-container {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 0 0 0 70px;
+  background-color: #000;
+  border-radius: 24px;
+}
+
+.salon {
+  padding: 60px 24px;
+}
+
+.salon__inner {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 648px);
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.salon__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 400px;
+  width: 100%;
+  height: 100%;
+  padding: 70px 0 24px 0;
+}
+
+.salon__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.salon__subtitle {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.4;
+  margin: 0 0 24px;
+}
+
+.salon__btn {
+  margin-bottom: 40px;
+}
+
+.salon__address {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.salon__address img {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.icon-pin {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill: #ffbe00;
+}
+
+.btn--yellow {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #ffd700, #ffb700);
+  color: #111;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s all;
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn--yellow:hover {
+  background: #fff;
+}
+
+.salon__media {
+  width: 100%;
+}
+.salon__image-wrapper {
+  width: 100%;
+  max-width: 648px;
+  border-radius: 8px;
+  overflow: hidden;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.salon__image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1366px) {
+  .salon-container {
+    padding: 0 0 0 40px;
+  }
+
+  .salon__content {
+    padding: 40px 0 24px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .salon-container {
+    padding: 0;
+  }
+
+  .salon__content {
+    min-width: initial;
+    padding: 40px 24px 0 24px;
+  }
+
+  .salon__inner {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .salon__content {
+    align-items: center;
+  }
+  .salon__address {
+    justify-content: center;
+  }
+
+  .salon__image-wrapper {
+    border-bottom-left-radius: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .salon {
+    padding: 40px 16px;
+  }
+  .salon__media {
+    margin-top: 30px;
+  }
+
+  .salon__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .salon__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

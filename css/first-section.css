@@ -47,4 +47,8 @@
   .page-hero__title {
     font-size: 32px;
   }
+
+  .page-hero .container-links {
+    padding: 24px 16px;
+  }
 }
