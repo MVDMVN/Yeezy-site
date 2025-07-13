@@ -14,7 +14,100 @@ img {
   display: flex;
 }
 
-.contact-map-section {
+.salon-about-container {
+  max-width: 1050px;
+  width: 100%;
+  padding: 60px 80px;
+}
+
+.salon-about-title {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.salon-about-text {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.salon-about-text-bold {
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.salon-about-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.salon-about-btn {
+  display: inline-block;
+  /* background: var(--yellow); */
+  background: linear-gradient(90deg, #ffd701 0%, #998101 100%);
+  padding: 15px 44px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  transition: 0.3s all;
+  text-decoration: none;
+}
+.salon-about-btn {
+  color: #000;
+}
+.salon-about-btn:hover {
+  color: #fff;
+}
+
+.salon-about-button-pricelist {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.salon-about-button-pricelist:hover {
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .salon-about-container {
+    padding: 40px 40px;
+  }
+
+  .salon-about-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .salon-about-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .salon-about-container {
+    padding: 40px 16px;
+  }
+
+  .salon-about-buttons {
+    flex-direction: column;
+    margin-top: 36px;
+  }
+
+  .salon-about-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px 36px;
+  }
+}
+
+/* .contact-map-section {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 40px;
@@ -23,7 +116,6 @@ img {
   padding: 60px 20px;
 }
 
-/* Левая колонка */
 .contact-map-section__info h3 {
   font-size: 16px;
   margin-top: 20px;
@@ -40,7 +132,7 @@ img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  /* background: url('pin.svg') center/contain no-repeat; */
+  
   fill: #ffbe00;
 }
 .contact-map-section__info a {
@@ -56,7 +148,7 @@ img {
   object-fit: cover;
 }
 
-/* Правая колонка — карта */
+
 .contact-map-section__map {
   width: 100%;
   min-height: 400px;
@@ -64,7 +156,7 @@ img {
   overflow: hidden;
 }
 
-/* Адаптив: на мобилке — одна колонка */
+
 @media (max-width: 768px) {
   .contact-map-section {
     grid-template-columns: 1fr;
@@ -73,4 +165,4 @@ img {
     margin-top: 30px;
     min-height: 300px;
   }
-}
+} */
