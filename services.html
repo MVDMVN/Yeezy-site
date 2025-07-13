@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YEEZY SALON</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/tops.css" />
+         <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="Logo image" />
+        </a>
+
+        <button class="menu-toggle" aria-label="Открыть меню">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a href="#" class="main-nav__link">ГОЛОВНА</a></li>
+            <li class="main-nav__item main-nav__item--has-dropdown">
+              <a href="#" class="main-nav__link">ПОСЛУГИ</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-menu__link">Услуга 1</a></li>
+                <li><a href="#" class="dropdown-menu__link">Услуга 2</a></li>
+                <li><a href="#" class="dropdown-menu__link">Услуга 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="main-nav__link main-nav__link--active"
+                >НОВИНИ</a
+              >
+            </li>
+            <li><a href="#" class="main-nav__link">САЛОНИ</a></li>
+            <li><a href="#" class="main-nav__link">ВАКАНСІЇ</a></li>
+            <li><a href="#" class="main-nav__link">ПРО YEEZY</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__top">
+          <a href="#" class="logo logo--mobile">
+            <img src="images/logo.png" alt="Logo image" />
+          </a>
+          <button class="mobile-menu__close" aria-label="Закрыть меню">
+            &times;
+          </button>
+        </div>
+        <nav class="mobile-menu__nav">
+          <ul>
+            <li>
+              <a href="#" class="mobile-menu__link mobile-menu__link--active"
+                >ГОЛОВНА</a
+              >
+            </li>
+            <li class="mobile-menu__item mobile-menu__item--has-submenu">
+              <button class="mobile-menu__sublink" type="button">
+                ПОСЛУГИ <span class="submenu-arrow">▾</span>
+              </button>
+              <ul class="mobile-submenu">
+                <li><a href="#" class="mobile-submenu__link">Услуга 1</a></li>
+                <li><a href="#" class="mobile-submenu__link">Услуга 2</a></li>
+                <li><a href="#" class="mobile-submenu__link">Услуга 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="mobile-menu__link">НОВИНИ</a></li>
+            <li><a href="#" class="mobile-menu__link">САЛОНИ</a></li>
+            <li><a href="#" class="mobile-menu__link">ВАКАНСІЇ</a></li>
+            <li><a href="#" class="mobile-menu__link">ПРО YEEZY</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__socials">
+          <a href="#" class="social-icon social-icon--insta"></a>
+          <a href="#" class="social-icon social-icon--tiktok"></a>
+          <a href="#" class="social-icon social-icon--fb"></a>
+        </div>
+        <a href="#" class="btn btn--gold mobile-menu__cta">ЗАПИСАТИСЬ</a>
+      </div>
+    </aside>
+
+    <section class="hero">
+      <img
+        src="/images/absolutephoto1.jpg"
+        alt="photo1"
+        class="absolute-photo photoA"
+      />
+      <img
+        src="/images/absolutephoto2.jpg"
+        alt="photo2"
+        class="absolute-photo photoB"
+      />
+
+      <div class="hero__content">
+        <div class="line-text">ПРОСТІР, ДЕ</div>
+        <div class="line-text">КРАСА ЗНАХОДИТЬ</div>
+        <div class="line-text">СВОЮ <span class="highlight">СИЛУ</span></div>
+        <p>
+          YEEZY — не про скромність. Це мережа салонів краси, стилю та
+          професійності, де кожна деталь націлена на комфорт та якість виконання
+          beauty-послуг
+        </p>
+        <button class="button">ЗАПИСАТИСЬ</button>
+
+        <div class="social-icons">
+          <a href="#"><img src="/images/icons/3.svg" alt="Instagram" /></a>
+          <a href="#"><img src="/images/icons/2.svg" alt="TikTok" /></a>
+          <a href="#"><img src="/images/icons/1.svg" alt="Facebook" /></a>
+        </div>
+      </div>
+
+      <div class="hero__slider">
+        <div class="slider__image" data-index="0">
+          <img src="/images/slider1.png" alt="Фото 1" />
+        </div>
+        <div class="slider__image hidden" data-index="1">
+          <img src="/images/slider2.jpg" alt="Фото 2" />
+        </div>
+        <div class="slider__image hidden" data-index="2">
+          <img src="/images/slider3.jpg" alt="Фото 3" />
+        </div>
+      </div>
+
+      <div class="slider__pagination">
+        <div class="progress-line">
+          <div class="progress-bg"></div>
+          <div class="progress-fg-part active"></div>
+          <div class="progress-fg-part"></div>
+          <div class="progress-fg-part"></div>
+        </div>
+        <div class="dots-row">
+          <button class="slider__dot active" data-index="0">01</button>
+          <button class="slider__dot" data-index="1">02</button>
+          <button class="slider__dot" data-index="2">03</button>
+        </div>
+      </div>
+    </section>
+
+     <section class="services-section">
+      <div class="news-header">
+        <h2>Послуги і ціни</h2>
+        <a href="#">Дивитись всі послуги →</a>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img src="images/services/color.png" alt="Фарбування волосся" />
+          <div class="card-text">
+            Фарбування волосся
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
+          </div>
+        </div>
+
+        <div class="card wide">
+          <img src="images/services/cut.png" alt="Стрижка волосся" />
+          <div class="card-text">
+            Стрижка волосся
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/services/hands.png" alt="Нігтьовий сервіс" />
+          <div class="card-text">
+            Нігтьовий сервіс
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/services/care.png" alt="Догляд для волосся" />
+          <div class="card-text">
+            Догляд для волосся
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/services/style.png" alt="Укладка волосся" />
+          <div class="card-text">
+            Укладка волосся
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/services/brows.png" alt="Брови та вії" />
+          <div class="card-text">
+            Брови та вії
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/services/makeup.png" alt="Макіяж" />
+          <div class="card-text">
+            Макіяж
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <section class="top-section">
+      <div class="top-container">
+        <!-- 1) Кнопки-вкладки -->
+        <div class="tabs__buttons">
+          <button class="tabs__button active" data-tab="1">Топ записи</button>
+          <button class="tabs__button" data-tab="2">ТОП Меню</button>
+          <button class="tabs__button" data-tab="3">ТОП Послуги</button>
+        </div>
+
+        <!-- 2) Контейнер для трёх панелей -->
+        <div class="tabs__content">
+          <!-- Вкладка 1 -->
+          <div class="tabs__pane active" data-tab="1">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Манікюр гель лаком ціна</a></li>
+              <li><a href="#">Корекція брів</a></li>
+              <li><a href="#">Укладка</a></li>
+              <li><a href="#">Макіяж для дівча</a></li>
+              <li><a href="#">Чубчик стрижка</a></li>
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+            </ul>
+          </div>
+
+          <!-- Вкладка 2 -->
+          <div class="tabs__pane" data-tab="2">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+            </ul>
+          </div>
+
+          <!-- Вкладка 3 -->
+          <div class="tabs__pane" data-tab="3">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Манікюр гель лаком ціна</a></li>
+              <li><a href="#">Корекція брів</a></li>
+              <li><a href="#">Укладка</a></li>
+              <li><a href="#">Макіяж для дівча</a></li>
+              <li><a href="#">Чубчик стрижка</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <!-- Верхняя часть -->
+      <div class="site-footer__top">
+        <!-- Логотип -->
+        <img
+          class="footer-logo"
+          src="images/footer-logo.png"
+          alt="Footer logo"
+        />
+
+        <!-- Категории -->
+        <nav class="footer-menu">
+          <h4 class="footer-menu__title">КАТЕГОРІЇ</h4>
+          <ul class="footer-menu__list">
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Послуги</a></li>
+            <li><a href="#">Новини</a></li>
+            <li><a href="#">Салони</a></li>
+            <li><a href="#">Вакансії</a></li>
+            <li><a href="#">Про Yeezy</a></li>
+          </ul>
+        </nav>
+
+        <!-- Адреса (две колонки внутри) -->
+        <div class="footer-addresses">
+          <h4 class="footer-addresses__title">АДРЕСА</h4>
+          <div class="footer-addresses__grid">
+            <ul class="footer-addresses__list">
+              <li>
+                <span>Дніпровська набережна, 14А</span>
+                <a href="tel:+380688585851" class="footer-addresses__phone">
+                  <!-- вставьте свою SVG-иконку телефона -->
+                  <img
+                    class="icon-phone"
+                    src="images/icons/phone.png"
+                    alt="Phone icon"
+                  />
+                  +380 68 858 5851
+                </a>
+              </li>
+              <li>
+                <span>пр. Володимира Івасюка, 4, к. 3</span>
+                <a href="tel:+380638585085" class="footer-addresses__phone">
+                  <img
+                    class="icon-phone"
+                    src="images/icons/phone.png"
+                    alt="Phone icon"
+                  />
+                  +380 63 858 5085
+                </a>
+              </li>
+              <li>
+                <span>Велика Житомирська 8a</span>
+                <a href="tel:+380938585850" class="footer-addresses__phone">
+                  <img
+                    class="icon-phone"
+                    src="images/icons/phone.png"
+                    alt="Phone icon"
+                  />
+                  +380 93 858 5850
+                </a>
+              </li>
+            </ul>
+            <ul class="footer-addresses__list">
+              <li>
+                <span>Верховина 11В</span>
+                <a href="tel:+380738585850" class="footer-addresses__phone">
+                  <img
+                    class="icon-phone"
+                    src="images/icons/phone.png"
+                    alt="Phone icon"
+                  />
+                  +380 73 858 5850
+                </a>
+              </li>
+              <li>
+                <span>вул. Антоновича 44</span>
+                <a href="tel:+380638585850" class="footer-addresses__phone">
+                  <img
+                    class="icon-phone"
+                    src="images/icons/phone.png"
+                    alt="Phone icon"
+                  />
+                  +380 63 858 5850
+                </a>
+              </li>
+              <li>
+                <span>Понеділок – неділя</span>
+                <div class="clock-wrapper">
+                  <img
+                    class="icon-phone"
+                    src="images/icons/clock.png"
+                    alt="Clock icon"
+                  />
+                  <time>09:00 – 21:00</time>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- О себе + кнопка + соцсети -->
+        <div class="footer-info">
+          <p class="footer-info__text">
+            Ми поєднуємо сучасні технології і професіоналізм майстрів, щоб
+            підкреслити вашу природну красу. Пропонуємо широкий спектр послуг:
+            перукарський сервіс, догляд за обличчям та тілом, манікюр, макіяж і
+            багато іншого. Завітайте до нас, і ми зробимо все, щоб ви відчували
+            себе неперевершено щодня.
+          </p>
+          <a href="#" class="btn btn--yellow footer-info__cta">ЗАПИСАТИСЬ</a>
+        </div>
+      </div>
+
+      <!-- Нижняя строка -->
+      <div class="site-footer__bottom">
+        <div class="footer-bottom__copyright">© 2025 Yeezy Salon</div>
+        <div class="footer-bottom__offer">
+          <a href="#">Договір публічної оферти</a>
+        </div>
+        <!-- пустой блок, чтобы центральная колонка выровнялась по центру -->
+        <div class="footer-info__socials">
+          <!-- ваши SVG-иконки соцсетей -->
+          <a href="#" class="social-icon social-icon--ig"></a>
+          <a href="#" class="social-icon social-icon--tt"></a>
+          <a href="#" class="social-icon social-icon--fb"></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.querySelector(".menu-toggle");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const closeBtn = document.querySelector(".mobile-menu__close");
+        const sublinkBtn = document.querySelector(".mobile-menu__sublink");
+
+        const btns = document.querySelectorAll(".tabs__button");
+        const panes = document.querySelectorAll(".tabs__pane");
+
+        function openMenu() {
+          mobileMenu.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          mobileMenu.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        toggle.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        // Закрытие по клику вне меню (опционально)
+        mobileMenu.addEventListener("click", (e) => {
+          if (e.target === mobileMenu) closeMenu();
+        });
+
+        document.querySelectorAll(".mobile-menu__sublink").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const parentLi = btn.closest(".mobile-menu__item--has-submenu");
+            if (!parentLi) return;
+            parentLi.classList.toggle("open");
+          });
+        });
+
+        btns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const id = btn.getAttribute("data-tab");
+            // 1) сброс всех
+            btns.forEach((b) => b.classList.remove("active"));
+            panes.forEach((p) => p.classList.remove("active"));
+            // 2) активируем нужные
+            btn.classList.add("active");
+            document
+              .querySelector(`.tabs__pane[data-tab="${id}"]`)
+              .classList.add("active");
+          });
+        });
+      });
+    </script>
+    
+  </body>
+</html>

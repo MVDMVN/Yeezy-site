@@ -155,6 +155,7 @@
   z-index: 30;
   overflow-y: auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 .mobile-menu[aria-hidden="false"] {
   transform: translateX(0);
@@ -239,6 +240,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
+    box-sizing: border-box;
   }
   .main-nav,
   .logo__sub {
