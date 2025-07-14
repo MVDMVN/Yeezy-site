@@ -7,140 +7,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/menu.css" />
-    <link rel="stylesheet" href="css/first-section.css" />
-    <link rel="stylesheet" href="css/salon.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/product-header.css" />
+    <link rel="stylesheet" href="css/product-page.css" />
     <link rel="stylesheet" href="css/tops.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
+    <!-- HEADER -->
     <header class="site-header">
-      <div class="container site-header__inner">
+      <div class="product-container site-header__inner">
         <a href="#" class="logo">
-          <img src="images/logo.png" alt="Logo image" />
+          <img src="images/logo.png" alt="" />
         </a>
 
-        <button class="menu-toggle" aria-label="Открыть меню">
-          <span class="menu-toggle__bar"></span>
-          <span class="menu-toggle__bar"></span>
-          <span class="menu-toggle__bar"></span>
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="burger__bar"></span>
+          <span class="burger__bar"></span>
+          <span class="burger__bar"></span>
         </button>
 
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li><a href="index.html" class="main-nav__link">ГОЛОВНА</a></li>
-            <li class="main-nav__item main-nav__item--has-dropdown">
-              <a href="services.html" class="main-nav__link">ПОСЛУГИ</a>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-menu__link">Услуга 1</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 2</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 3</a></li>
-              </ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="salons.html">Салони</a></li>
+            <li><a href="#">Вакансії</a></li>
+            <li><a href="#">Про Yeezy</a></li>
+            <li><a class="active" href="#">Магазин</a></li>
+            <li>
+              <div class="cart-wrapper">
+                <img src="images/icons/cart.svg" alt="cart icon" />
+                <span class="cart-amount">0</span>
+              </div>
             </li>
-            <li><a href="news.html" class="main-nav__link">НОВИНИ</a></li>
-            <li><a href="salons.html" class="main-nav__link main-nav__link--active">САЛОНИ</a></li>
-            <li><a href="#" class="main-nav__link">ВАКАНСІЇ</a></li>
-            <li><a href="#" class="main-nav__link">ПРО YEEZY</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <aside class="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu__inner">
-        <div class="mobile-menu__top">
-          <a href="#" class="logo logo--mobile">
-            <img src="images/logo.png" alt="Logo image" />
-          </a>
-          <button class="mobile-menu__close" aria-label="Закрыть меню">&times;</button>
-        </div>
-        <nav class="mobile-menu__nav">
-          <ul>
-            <li><a href="index.html" class="mobile-menu__link mobile-menu__link--active">ГОЛОВНА</a></li>
-            <li class="mobile-menu__item mobile-menu__item--has-submenu">
-              <a href="services.html">
-                <button class="mobile-menu__sublink" type="button">ПОСЛУГИ <span class="submenu-arrow">▾</span></button>
-              </a>
-              <ul class="mobile-submenu">
-                <li><a href="#" class="mobile-submenu__link">Услуга 1</a></li>
-                <li><a href="#" class="mobile-submenu__link">Услуга 2</a></li>
-                <li><a href="#" class="mobile-submenu__link">Услуга 3</a></li>
-              </ul>
-            </li>
-            <li><a href="news.html" class="mobile-menu__link">НОВИНИ</a></li>
-            <li><a href="salons.html" class="mobile-menu__link">САЛОНИ</a></li>
-            <li><a href="#" class="mobile-menu__link">ВАКАНСІЇ</a></li>
-            <li><a href="#" class="mobile-menu__link">ПРО YEEZY</a></li>
-          </ul>
-        </nav>
-        <div class="mobile-menu__socials">
-          <a href="#" class="social-icon social-icon--insta"></a>
-          <a href="#" class="social-icon social-icon--tiktok"></a>
-          <a href="#" class="social-icon social-icon--fb"></a>
-        </div>
-        <a href="#" class="btn btn--gold mobile-menu__cta">ЗАПИСАТИСЬ</a>
-      </div>
-    </aside>
-
-    <section class="page-hero" style="background-image: url('images/salon-bg.png')">
-      <div class="container-links">
-        <nav class="breadcrumb">
-          <a href="#" class="breadcrumb__link">Головна</a>
-          <span class="breadcrumb__sep">›</span>
-          <a href="#" class="breadcrumb__link"><span class="breadcrumb__current">Салони</span></a>
-          <span class="breadcrumb__sep">›</span>
-          <span class="breadcrumb__current breadcrumb__current-selected">YEEZY SALON IVASUKA</span>
-        </nav>
-        <h1 class="page-hero__title">Догляд для волоссям</h1>
-      </div>
-    </section>
-
-    <section class="salon-about">
-      <div class="salon-about-container">
-        <h2 class="salon-about-title">Про салон</h2>
-        <p class="salon-about-text">
-          Beauty-простір, де краса зустрічається з гармонією.Наш салон – це місце, де кожен гість може відчути себе особливим. Тут поєднуються професіоналізм, естетика та
-          бездоганний сервіс, щоб ви могли насолодитися моментом і отримати ідеальний результат.
-        </p>
-        <p class="salon-about-text">
-          <span class="salon-about-text-bold">Наші послуги включають:</span> <br />
-          💇‍♀️ Стильні стрижки, укладки, складні техніки фарбування <br />
-          💅 Манікюр та педикюр, SPA-догляди <br />
-          ✨ Візаж, оформлення та ламінування брів і вій <br />
-          💆‍♀️ Доглядові процедури для здоров’я та краси волосся<br />
-        </p>
-        <p class="salon-about-text">
-          Ми цінуємо якість та безпеку, тому працюємо лише з преміальними професійними засобами. У нашій команді – найкращі майстри, які постійно вдосконалюють свої навички та
-          стежать за останніми beauty-трендами. Запрошуємо вас у світ краси, де кожен візит – це час для себе, момент релаксу та оновлення.
-        </p>
-        <p class="salon-about-text">📍 Чекаємо вас за адресою: просп. Володимира Івасюка, 4, корпус 3</p>
-
-        <div class="salon-about-buttons">
-          <a class="salon-about-button-signup salon-about-btn" href="#">записатись</a>
-          <a class="salon-about-button-pricelist salon-about-btn" href="#">прайс-лист</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-map-section">
-      <div class="contact-map-section__info">
-        <h3>Години роботи</h3>
-        <p><img src="images/icons/time.png" alt="time icon" /> Пн–Нд: 09:00 – 21:00</p>
-
-        <h3>Адреса</h3>
-        <p><img src="images/icons/location-icon.png" alt="location icon" /> пр. Володимира Івасюка, 4, корпус 3</p>
-
-        <h3>Телефон</h3>
-        <p><img src="images/icons/phone.png" alt="phone icon" /> <a href="tel:+380638585085">+380 63 858 50 85</a></p>
-
-        <div class="contact-map-section__photo">
-          <img src="images/where.png" alt="Вхід до салону Yeezy" />
-        </div>
-      </div>
-
-      <div id="map" class="contact-map-section__map"></div>
-    </section>
 
     <section class="top-section">
       <div class="top-container">
@@ -312,25 +217,63 @@
       </div>
     </footer>
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      // сразу после подключения mapbox-gl.js
-      mapboxgl.accessToken = "pk.eyJ1IjoibWFrc29uMTk5MSIsImEiOiJjbWN6djNqcjkxMjJtMmtzM24yZmR1aWI2In0.jwWvWa-oJOnErDReHqRS-w";
+      // // 1) Mobile-menu toggle
+      // document.querySelector(".menu-toggle").addEventListener("click", () => {
+      //   document.querySelector(".main-nav").classList.toggle("open");
+      // });
 
-      const map = new mapboxgl.Map({
-        container: "map", // id контейнера
-        style: "mapbox://styles/mapbox/dark-v10", // тёмная тема
-        center: [30.5167, 50.4333], // [долгота, широта]
-        zoom: 14,
+      const burger = document.querySelector(".burger");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        const expanded = burger.classList.contains("open");
+        burger.setAttribute("aria-expanded", expanded);
+        document.querySelector(".main-nav").classList.toggle("open");
       });
 
-      // отключаем стандартный UI
-      map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "top-right");
-      map.scrollZoom.disable();
+      // 2) SwiperJS gallery + thumbs
+      const thumbs = new Swiper(".product-gallery-thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          576: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+        },
+      });
+      const main = new Swiper(".product-gallery-main", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: { swiper: thumbs },
+      });
 
-      // маркер
-      new mapboxgl.Marker({ color: "#ffbe00" }).setLngLat([30.5167, 50.4333]).addTo(map);
+      // 3) Quantity selector
+      document.querySelectorAll(".qty-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const input = btn.parentNode.querySelector(".qty-input");
+          let val = parseInt(input.value, 10);
+          btn.dataset.action === "plus" ? val++ : val--;
+          input.value = Math.max(val, 1);
+        });
+      });
+
+      // 4) Tabs
+      document.querySelectorAll(".tabs__btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tab = btn.dataset.tab;
+          document.querySelectorAll(".tabs__btn").forEach((b) => b.classList.remove("active"));
+          document.querySelectorAll(".tabs__pane").forEach((p) => p.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById(tab).classList.add("active");
+        });
+      });
     </script>
 
     <script>
