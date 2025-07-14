@@ -220,96 +220,11 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      // // 1) Mobile-menu toggle
-      // document.querySelector(".menu-toggle").addEventListener("click", () => {
-      //   document.querySelector(".main-nav").classList.toggle("open");
-      // });
-
-      const burger = document.querySelector(".burger");
-
-      burger.addEventListener("click", () => {
-        burger.classList.toggle("open");
-        const expanded = burger.classList.contains("open");
-        burger.setAttribute("aria-expanded", expanded);
-        document.querySelector(".main-nav").classList.toggle("open");
-      });
-
-      // 2) SwiperJS gallery + thumbs
-      const thumbs = new Swiper(".product-gallery-thumbs", {
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-          576: { slidesPerView: 3 },
-          768: { slidesPerView: 4 },
-        },
-      });
-      const main = new Swiper(".product-gallery-main", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: { swiper: thumbs },
-      });
-
-      // 3) Quantity selector
-      document.querySelectorAll(".qty-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const input = btn.parentNode.querySelector(".qty-input");
-          let val = parseInt(input.value, 10);
-          btn.dataset.action === "plus" ? val++ : val--;
-          input.value = Math.max(val, 1);
-        });
-      });
-
-      // 4) Tabs
-      document.querySelectorAll(".tabs__btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const tab = btn.dataset.tab;
-          document.querySelectorAll(".tabs__btn").forEach((b) => b.classList.remove("active"));
-          document.querySelectorAll(".tabs__pane").forEach((p) => p.classList.remove("active"));
-          btn.classList.add("active");
-          document.getElementById(tab).classList.add("active");
-        });
-      });
-    </script>
-
-    <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.querySelector(".menu-toggle");
-        const mobileMenu = document.querySelector(".mobile-menu");
-        const closeBtn = document.querySelector(".mobile-menu__close");
-        const sublinkBtn = document.querySelector(".mobile-menu__sublink");
-
         const btns = document.querySelectorAll(".tabs__button");
         const panes = document.querySelectorAll(".tabs__pane");
 
-        function openMenu() {
-          mobileMenu.setAttribute("aria-hidden", "false");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          mobileMenu.setAttribute("aria-hidden", "true");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", openMenu);
-        closeBtn.addEventListener("click", closeMenu);
-        // Закрытие по клику вне меню (опционально)
-        mobileMenu.addEventListener("click", (e) => {
-          if (e.target === mobileMenu) closeMenu();
-        });
-
-        document.querySelectorAll(".mobile-menu__sublink").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const parentLi = btn.closest(".mobile-menu__item--has-submenu");
-            if (!parentLi) return;
-            parentLi.classList.toggle("open");
-          });
-        });
+        const burger = document.querySelector(".burger");
 
         btns.forEach((btn) => {
           btn.addEventListener("click", () => {
@@ -321,6 +236,13 @@
             btn.classList.add("active");
             document.querySelector(`.tabs__pane[data-tab="${id}"]`).classList.add("active");
           });
+        });
+
+        burger.addEventListener("click", () => {
+          burger.classList.toggle("open");
+          const expanded = burger.classList.contains("open");
+          burger.setAttribute("aria-expanded", expanded);
+          document.querySelector(".main-nav").classList.toggle("open");
         });
       });
     </script>
