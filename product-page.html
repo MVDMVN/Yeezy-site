@@ -47,6 +47,99 @@
       </div>
     </header>
 
+    <section class="product">
+      <div class="product-detail-container">
+        <nav class="breadcrumbs">
+          <a href="#">Головна</a> › <a href="#">Магазин</a> ›
+          <span>Redken Extreme Length</span>
+        </nav>
+
+        <div class="product-detail__inner">
+          <div class="product-detail__gallery">
+            <div class="swiper main-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/product-images/product-1.png" alt="Redken Extreme Length – вид спереду" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/product-images/product-2.png" alt="Redken Extreme Length – вид сбоку" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/product-images/product-3.png" alt="Redken Extreme Length – крупный план" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper thumb-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/product-images/product-1.png" alt="Redken Extreme Length – вид спереду" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/product-images/product-2.png" alt="Redken Extreme Length – вид спереду" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/product-images/product-3.png" alt="Redken Extreme Length – вид спереду" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Информация о товаре -->
+          <div class="product-detail__info">
+            <div class="product-detail__header">
+              <span class="product-detail__category">Категорія: <strong>Шампунь</strong></span>
+              <h1 class="product-detail__title">Багатофункціональна маска потрійної дії для зміцнення довгого волосся Redken Extreme Length Triple Action Treatment Mask</h1>
+              <p class="product-detail__shortdesc">
+                Відновлювальна маска для пошкодженого волосся Redken Extreme Length Triple Action Treatment допоможе зміцнити тонке волосся з посіченими кінчиками. Засіб допомагає
+                зменшити ламкість волосся по всій його довжині, від коренів до кінчиків, і водночас стимулює його ріст.
+              </p>
+            </div>
+
+            <div class="product-detail__purchase">
+              <div class="product-detail__price">1 150 ₴</div>
+              <div class="product-detail__action">
+                <div class="quantity-selector">
+                  <button class="qty-btn" data-action="minus">−</button>
+                  <input class="qty-input" value="1" min="1" />
+                  <button class="qty-btn" data-action="plus">＋</button>
+                </div>
+                <button class="btn buy-btn">
+                  <img src="images/product-images/cart-buy-button-icon.svg" alt="cart icon" />
+                  Купити
+                </button>
+              </div>
+            </div>
+
+            <div class="product-detail__tabs">
+              <div class="product-tabs__buttons">
+                <button class="product-tabs__btn active" data-tab="desc">Опис товару</button>
+                <button class="product-tabs__btn" data-tab="delivery">Доставка та оплата</button>
+              </div>
+              <div class="product-tabs__content">
+                <div class="product-tabs__pane active" id="desc">
+                  <p>
+                    Її склад, який містить біотин, націанідин і рицинолову олію в поєднанні з поверхнево-активними речовинами, силіконами й гліцерином, миттєво відновлює й зміцнює
+                    волосся, не обтяжуючи його.
+                  </p>
+                  <p class="product-tabs__features-title">Властивості:</p>
+                  <ul class="features-list">
+                    <li>стимулює ріст і відновлює волосся по всій довжині</li>
+                    <li>запобігає ламкості волосся, живить і зміцнює волокна</li>
+                    <li>сприяє відновленню посічених кінчиків</li>
+                    <li>підтримує здоровий стан шкіри голови</li>
+                    <li>доглядає за ослабленим волоссям від коренів до кінчиків</li>
+                  </ul>
+                </div>
+                <div class="product-tabs__pane" id="delivery">
+                  <p>Доставка по Україні службою «Нова Пошта». Оплата – готівкою кур’єру або онлайн банківською карткою.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="top-section">
       <div class="top-container">
         <!-- 1) Кнопки-вкладки -->
@@ -220,96 +313,11 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      // // 1) Mobile-menu toggle
-      // document.querySelector(".menu-toggle").addEventListener("click", () => {
-      //   document.querySelector(".main-nav").classList.toggle("open");
-      // });
-
-      const burger = document.querySelector(".burger");
-
-      burger.addEventListener("click", () => {
-        burger.classList.toggle("open");
-        const expanded = burger.classList.contains("open");
-        burger.setAttribute("aria-expanded", expanded);
-        document.querySelector(".main-nav").classList.toggle("open");
-      });
-
-      // 2) SwiperJS gallery + thumbs
-      const thumbs = new Swiper(".product-gallery-thumbs", {
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-          576: { slidesPerView: 3 },
-          768: { slidesPerView: 4 },
-        },
-      });
-      const main = new Swiper(".product-gallery-main", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: { swiper: thumbs },
-      });
-
-      // 3) Quantity selector
-      document.querySelectorAll(".qty-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const input = btn.parentNode.querySelector(".qty-input");
-          let val = parseInt(input.value, 10);
-          btn.dataset.action === "plus" ? val++ : val--;
-          input.value = Math.max(val, 1);
-        });
-      });
-
-      // 4) Tabs
-      document.querySelectorAll(".tabs__btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const tab = btn.dataset.tab;
-          document.querySelectorAll(".tabs__btn").forEach((b) => b.classList.remove("active"));
-          document.querySelectorAll(".tabs__pane").forEach((p) => p.classList.remove("active"));
-          btn.classList.add("active");
-          document.getElementById(tab).classList.add("active");
-        });
-      });
-    </script>
-
-    <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.querySelector(".menu-toggle");
-        const mobileMenu = document.querySelector(".mobile-menu");
-        const closeBtn = document.querySelector(".mobile-menu__close");
-        const sublinkBtn = document.querySelector(".mobile-menu__sublink");
-
         const btns = document.querySelectorAll(".tabs__button");
         const panes = document.querySelectorAll(".tabs__pane");
 
-        function openMenu() {
-          mobileMenu.setAttribute("aria-hidden", "false");
-          document.body.style.overflow = "hidden";
-        }
-
-        function closeMenu() {
-          mobileMenu.setAttribute("aria-hidden", "true");
-          document.body.style.overflow = "";
-        }
-
-        toggle.addEventListener("click", openMenu);
-        closeBtn.addEventListener("click", closeMenu);
-        // Закрытие по клику вне меню (опционально)
-        mobileMenu.addEventListener("click", (e) => {
-          if (e.target === mobileMenu) closeMenu();
-        });
-
-        document.querySelectorAll(".mobile-menu__sublink").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const parentLi = btn.closest(".mobile-menu__item--has-submenu");
-            if (!parentLi) return;
-            parentLi.classList.toggle("open");
-          });
-        });
+        const burger = document.querySelector(".burger");
 
         btns.forEach((btn) => {
           btn.addEventListener("click", () => {
@@ -320,6 +328,54 @@
             // 2) активируем нужные
             btn.classList.add("active");
             document.querySelector(`.tabs__pane[data-tab="${id}"]`).classList.add("active");
+          });
+        });
+
+        burger.addEventListener("click", () => {
+          burger.classList.toggle("open");
+          const expanded = burger.classList.contains("open");
+          burger.setAttribute("aria-expanded", expanded);
+          document.querySelector(".main-nav").classList.toggle("open");
+        });
+
+        const thumbs = new Swiper(".thumb-slider", {
+          spaceBetween: 10,
+          slidesPerView: 4,
+          freeMode: true,
+          watchSlidesProgress: true,
+          breakpoints: {
+            576: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+          },
+        });
+        // инициализируем главный слайдер, связав с превью
+        new Swiper(".main-slider", {
+          spaceBetween: 10,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          thumbs: { swiper: thumbs },
+        });
+
+        // счётчик количества
+        document.querySelectorAll(".qty-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const input = btn.parentNode.querySelector(".qty-input");
+            let v = parseInt(input.value) || 1;
+            btn.dataset.action === "plus" ? v++ : v--;
+            input.value = Math.max(1, v);
+          });
+        });
+
+        // табы
+        document.querySelectorAll(".product-tabs__btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const tab = btn.dataset.tab;
+            document.querySelectorAll(".product-tabs__btn").forEach((b) => b.classList.remove("active"));
+            document.querySelectorAll(".product-tabs__pane").forEach((p) => p.classList.remove("active"));
+            btn.classList.add("active");
+            document.getElementById(tab).classList.add("active");
           });
         });
       });
