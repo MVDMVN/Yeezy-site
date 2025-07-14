@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/first-section.css" />
     <link rel="stylesheet" href="css/salon.css" />
@@ -311,59 +312,25 @@
       </div>
     </footer>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 
     <script>
-      function initMap() {
-        const center = { lat: 50.4333, lng: 30.5167 }; // ваши координаты
+      // сразу после подключения mapbox-gl.js
+      mapboxgl.accessToken = "pk.eyJ1IjoibWFrc29uMTk5MSIsImEiOiJjbWN6djNqcjkxMjJtMmtzM24yZmR1aWI2In0.jwWvWa-oJOnErDReHqRS-w";
 
-        // Пример «dark» стиля (взято из Snazzy Maps)
-        const darkStyle = [
-          { elementType: "geometry", stylers: [{ color: "#1f1f1f" }] },
-          { elementType: "labels.text.stroke", stylers: [{ color: "#1f1f1f" }] },
-          { elementType: "labels.text.fill", stylers: [{ color: "#8f8f8f" }] },
-          {
-            featureType: "poi",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#666666" }],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [{ color: "#2c2c2c" }],
-          },
-          {
-            featureType: "transit",
-            elementType: "geometry",
-            stylers: [{ color: "#2c2c2c" }],
-          },
-          {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [{ color: "#0e0e0e" }],
-          },
-          // …добавьте другие правила по вкусу
-        ];
+      const map = new mapboxgl.Map({
+        container: "map", // id контейнера
+        style: "mapbox://styles/mapbox/dark-v10", // тёмная тема
+        center: [30.5167, 50.4333], // [долгота, широта]
+        zoom: 14,
+      });
 
-        const map = new google.maps.Map(document.getElementById("map"), {
-          center,
-          zoom: 14,
-          styles: darkStyle,
-          disableDefaultUI: true, // убираем лишние контролы
-        });
+      // отключаем стандартный UI
+      map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "top-right");
+      map.scrollZoom.disable();
 
-        new google.maps.Marker({
-          position: center,
-          map,
-          icon: {
-            path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-            scale: 5,
-            fillColor: "#ffbe00",
-            fillOpacity: 1,
-            strokeWeight: 0,
-          },
-        });
-      }
+      // маркер
+      new mapboxgl.Marker({ color: "#ffbe00" }).setLngLat([30.5167, 50.4333]).addTo(map);
     </script>
 
     <script>
