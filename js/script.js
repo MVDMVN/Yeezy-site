@@ -74,3 +74,23 @@ locations.forEach(loc => {
     .setPopup(new mapboxgl.Popup({ offset: 25 }).setText(`${loc.id}. ${loc.name}`))
     .addTo(map);
 });
+
+
+
+const haircareTrack = document.querySelector('.haircare-track');
+const leftArrow = document.querySelector('.haircare-arrow.left');
+const rightArrow = document.querySelector('.haircare-arrow.right');
+
+let haircareScroll = 0;
+const cardWidth = 270;
+
+leftArrow.addEventListener('click', () => {
+  haircareScroll = Math.max(0, haircareScroll - cardWidth);
+  haircareTrack.style.transform = `translateX(-${haircareScroll}px)`;
+});
+
+rightArrow.addEventListener('click', () => {
+  const maxScroll = haircareTrack.scrollWidth - haircareTrack.clientWidth;
+  haircareScroll = Math.min(maxScroll, haircareScroll + cardWidth);
+  haircareTrack.style.transform = `translateX(-${haircareScroll}px)`;
+});

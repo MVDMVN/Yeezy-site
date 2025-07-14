@@ -1,12 +1,13 @@
 .haircare-container {
   max-width: 1920px;
-  display: flex;
-  flex-direction: column;
   margin: auto;
   padding: 64px 80px;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
+/* Hero section */
 .haircare-hero {
   background-color: #dfddd7;
   text-align: start;
@@ -14,7 +15,6 @@
 
 .haircare-title {
   font-weight: 500;
-
   font-size: 50px;
 }
 
@@ -22,83 +22,190 @@
   max-width: 1090px;
   font-weight: 500;
   font-size: 16px;
-
   line-height: 150%;
 }
 
 .haircare-button {
-  background: linear-gradient(90deg, #FFD701 0%, #998101 100%);
-
+  background-color: #f9c21a;
   max-width: 200px;
   border: none;
   padding: 15px 44px;
-
-  cursor: pointer;
-  font-weight: 600;
-
   font-size: 15px;
-
+  font-weight: 600;
+  cursor: pointer;
   text-align: center;
 }
 
+/* Services section */
 .haircare-services {
-  background-color: #111;
+  background-color: #161616;
   color: #fff;
 }
 
+/* Header row above carousel */
+.haircare-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .haircare-subtitle {
-  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+/* Arrows */
+.haircare-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.haircare-arrow {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.haircare-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Carousel */
+.haircare-carousel-wrapper {
+  position: relative;
 }
 
 .haircare-carousel {
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
 }
 
 .haircare-track {
   display: flex;
   gap: 20px;
-  transition: transform 0.3s ease;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .haircare-card {
-  background-color: #222;
-  border-radius: 10px;
+  flex: 0 0 calc((100% - 3 * 20px) / 4); /* 4 карточки, 3 промежутка */
+  position: relative;
+  height: 421px;
   overflow: hidden;
-  min-width: 250px;
-  max-width: 250px;
-  text-align: center;
+  border-radius: 10px;
+  background: #222;
+}
+
+.haircare-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.25%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
 }
 
 .haircare-card img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
 }
 
-.haircare-card p {
-  padding: 10px;
-  font-weight: bold;
-}
-
-.haircare-arrow {
+.haircare-card-footer {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.haircare-arrow.left {
+  bottom: 0;
   left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 24px;
+
+  z-index: 2;
+  padding-bottom: 30px;
 }
 
-.haircare-arrow.right {
-  right: 0;
+.haircare-card-footer p {
+  margin: 0;
+  color: #fff;
+  flex: 1; /* чтобы текст не сжимался */
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+  object-fit: contain;
+  display: block;
+  margin-left: 12px;
+}
+
+.haircare-info {
+  background-color: #f3f3f3;
+  border: 1px solid #F2CC01;
+  padding: 64px 80px;
+  margin: 64px 80px;
+  max-width: 1920px;
+  border-radius: 24px;
+  
+}
+
+.haircare-info-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+ 
+.haircare-info-text{
+    max-width: 1181px;
+    width: 100%;
+}
+.haircare-info-text h2,
+.haircare-info-text h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.haircare-info-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.haircare-info-image {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.haircare-info-image img {
+  width: 100%;
+  max-width: 1181px;
+  aspect-ratio: 1181 / 624;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.haircare-info-text ul {
+  list-style: disc inside;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.haircare-info-text li {
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
