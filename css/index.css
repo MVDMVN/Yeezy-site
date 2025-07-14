@@ -349,8 +349,7 @@ body {
 }
 
 .card:hover .arrow-icon {
-  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg)
-    saturate(800%) brightness(0.9);
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(0deg) saturate(800%) brightness(0.9);
 }
 
 .card.highlight .card-text {
@@ -472,7 +471,6 @@ body {
   border-bottom: 1px solid #ffffff26;
   color: #eee;
   font-size: 1rem;
-  
 }
 
 .signup-form input[type="text"]::placeholder,
@@ -624,6 +622,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .about__image-block {
@@ -802,7 +801,6 @@ body {
   border: 2px solid black;
 }
 
-
 .info-box ul li {
   display: flex;
   align-items: center;
@@ -836,11 +834,10 @@ body {
 }
 
 .info-box ul li :hover {
-  color:#ffd700 ;
+  color: #ffd700;
 }
 /* Планшеты: ширина до 1024px */
 @media (max-width: 1024px) {
-
   .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -863,14 +860,12 @@ body {
     line-height: 1;
     margin-left: 12px;
     transition: transform 0.3s ease;
-    color: #D3AF37;
+    color: #d3af37;
   }
 
   .faq-item.open .faq-toggle-icon {
     transform: rotate(45deg); /* + => x */
   }
-
-
 
   .about__image-title {
     position: relative;
@@ -980,8 +975,6 @@ body {
     border-radius: 24px;
   }
 
-
-
   .news-grid {
     display: flex;
     flex-wrap: nowrap;
@@ -989,8 +982,8 @@ body {
     gap: 16px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    
-    padding: 0  16px; /* Внутренние отступы */
+
+    padding: 0 16px; /* Внутренние отступы */
     box-sizing: border-box;
   }
 
@@ -999,8 +992,6 @@ body {
     width: 265px;
     scroll-snap-align: start;
   }
-
-
 
   .news-card img {
     height: 309px;
@@ -1026,16 +1017,13 @@ body {
     padding: 0 16px;
   }
 
-
   .faq-container {
-        padding: 0 16px;
+    padding: 0 16px;
   }
   .about__image-title h2 {
     font-size: 36px;
   }
 
-
-  
   .news-section {
     padding-left: 16px;
   }
@@ -1134,10 +1122,6 @@ body {
       flex-direction: column;
     }
 
- 
-
-    
-
     .section-title,
     .news-header h2 {
       font-size: 32px;
@@ -1152,9 +1136,6 @@ body {
     .about__image-title h2 {
       font-size: 28px;
     }
-
-
-
 
     .faq-item {
       flex-direction: column;
