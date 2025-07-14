@@ -1,109 +1,80 @@
-
-
-
-.catalog-heading {
-  margin-top: 0;
+.shop {
+  padding: 40px 100px;
+  max-width: 1920px;
+  margin: 0 auto;
+  background:#EFEEEC;
 }
 
-.catalog-wrapper {
-  display: flex;
- max-width: 1760px;
-margin: 0 auto;
- 
+.shop__breadcrumbs {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
 }
 
-.catalog-sidebar {
-  width: 250px;
-  background: #fff;
-  padding: 1rem;
-  border-right: 1px solid #ddd;
-}
-
-.catalog-products {
-  flex: 1;
-  padding-left: 2rem;
-}
-
-.catalog-filters h3,
-.catalog-brands h3 {
-  margin-bottom: 0.5rem;
-}
-
-.catalog-filters label,
-.catalog-brands label {
-  display: block;
-  margin: 5px 0;
-}
-
-.catalog-grid {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.catalog-card {
-  background: #fff;
-  width: 300px;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.catalog-card img {
-  width: 100%;
-  height: auto;
-}
-
-.catalog-card-content {
-  padding: 1rem;
-}
-
-.catalog-price {
+.shop__title {
+  font-size: 32px;
   font-weight: bold;
-  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
 
-.catalog-title {
-  font-size: 0.95rem;
-  margin: 0.5rem 0;
-  min-height: 60px;
+.shop__content {
+  display: flex;
+  gap: 40px;
 }
 
-.catalog-buy-row {
+.shop__filters {
+  flex: 0 0 385px;
+}
+
+.shop__filters h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.filters__categories,
+.filters__brands {
+  margin-bottom: 30px;
+}
+
+.filters__categories ul,
+.filters__brands ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filters__categories li,
+.filters__brands li {
+  margin-bottom: 10px;
+}
+
+.shop__main {
+  flex: 1;
+}
+
+.shop__topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-bottom: 30px;
 }
 
-.catalog-qty {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+.shop__results {
+  font-size: 14px;
+  color: #999;
 }
 
-.catalog-qty button {
-  width: 25px;
-  height: 25px;
+.shop__sort {
+  font-size: 14px;
+  color: #999;
   cursor: pointer;
 }
 
-.catalog-qty input {
-  width: 30px;
-  text-align: center;
-}
-
-.catalog-buy-btn {
-  background: #e0b42f;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-  border-radius: 3px;
-  transition: background 0.3s ease;
-}
-
-.catalog-buy-btn:hover {
-  background: #c89f26;
+/* Грид на 3 карточки равномерно по ширине */
+.shop__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
 }

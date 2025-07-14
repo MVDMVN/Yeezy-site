@@ -1,77 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category page</title>
-     <link rel="stylesheet" href="css/category.css" />
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новина</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/menu.css" />
-    <link rel="stylesheet" href="css/first-section.css" />
-    <link rel="stylesheet" href="css/news.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/product-header.css" />
+    <link rel="stylesheet" href="css/product-page.css" />
     <link rel="stylesheet" href="css/tops.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/service.css" />
-</head>
-<body>
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/category.css" />
+        <link rel="stylesheet" href="css/first-section.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="product-container site-header__inner">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="" />
+        </a>
 
-      <!-- Секция каталога -->
-  <section class="catalog-section">
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="burger__bar"></span>
+          <span class="burger__bar"></span>
+          <span class="burger__bar"></span>
+        </button>
 
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="salons.html">Салони</a></li>
+            <li><a href="#">Вакансії</a></li>
+            <li><a href="#">Про Yeezy</a></li>
+            <li><a class="active" href="#">Магазин</a></li>
+            <li>
+              <div class="cart-wrapper">
+                <img src="images/icons/cart.svg" alt="cart icon" />
+                <span class="cart-amount">0</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <div class="catalog-wrapper">
-      <!-- Сайдбар -->
-      <aside class="catalog-sidebar">
-        <div class="catalog-filters">
-          <h3>Категорії</h3>
-          <label><input type="checkbox" /> Кондиціонер</label>
-          <label><input type="checkbox" /> Крем для волосся</label>
-          <label><input type="checkbox" /> Лосьйон</label>
-          <label><input type="checkbox" /> Маски для волосся</label>
-          <label><input type="checkbox" /> Масло для волосся</label>
-          <label><input type="checkbox" /> Спрей для волосся</label>
-          <label><input type="checkbox" /> Спрей для об'єму</label>
-          <label><input type="checkbox" /> Сухий шампунь</label>
-          <label><input type="checkbox" /> Термозахист</label>
-          <label><input type="checkbox" /> Шампунь</label>
+<section class="shop">
+  <div class="shop__container">
+    <nav class="shop__breadcrumbs">Главная > Магазин</nav>
+    <h1 class="shop__title">Магазин</h1>
+
+    <div class="shop__content">
+      <aside class="shop__filters">
+        <h3 class="filters__title">Фільтр</h3>
+
+        <div class="filters__group">
+          <h4 class="filters__group-title">Категорії</h4>
+          <ul class="filters__list">
+            <li><input type="checkbox"> Кондиціонер</li>
+            <li><input type="checkbox"> Крем для волосся</li>
+            <li><input type="checkbox"> Лосьйон</li>
+            <li><input type="checkbox"> Маски для волосся</li>
+            <li><input type="checkbox"> Масло для волосся</li>
+            <li><input type="checkbox"> Спрей для волосся</li>
+            <li><input type="checkbox"> Спрей для об'єму</li>
+            <li><input type="checkbox"> Сухий шампунь</li>
+            <li><input type="checkbox"> Термозахист</li>
+            <li><input type="checkbox"> Шампунь</li>
+          </ul>
         </div>
-        <div class="catalog-brands" style="margin-top: 1rem;">
-          <h3>Бренди</h3>
-          <label><input type="checkbox" /> KEVIN.MURPHY</label>
-          <label><input type="checkbox" /> REDKEN</label>
+
+        <div class="filters__group">
+          <h4 class="filters__group-title">Бренди</h4>
+          <ul class="filters__list">
+            <li><input type="checkbox"> KEVIN.MURPHY</li>
+            <li><input type="checkbox"> REDKEN</li>
+          </ul>
         </div>
       </aside>
 
-      <!-- Продукты -->
-      <main class="catalog-products">
-        <p>Знайдено 40 товарів</p>
-        <div class="catalog-grid">
-
-          <!-- Карточка товара -->
-          <div class="catalog-card">
-            <img src="https://i.imgur.com/8YqLzY1.png" alt="Redken Extreme Mask" />
-            <div class="catalog-card-content">
-              <div class="catalog-price">1,150 ₴</div>
-              <div class="catalog-title">
-                Багатофункціональна маска Redken Extreme Length Triple Action Treatment Mask
-              </div>
-              <div class="catalog-buy-row">
-                <div class="catalog-qty">
-                  <button onclick="decreaseQty(this)">-</button>
-                  <input type="text" value="1" />
-                  <button onclick="increaseQty(this)">+</button>
-                </div>
-                <button class="catalog-buy-btn">Купити</button>
-              </div>
-            </div>
-          </div>
-
+      <div class="shop__products">
+        <div class="shop__topbar">
+          <div class="shop__count">Знайдено 40 товарів</div>
+          <div class="shop__sort">За популярністю ▼</div>
         </div>
-      </main>
+
+        
+          <div class="products-grid">
+    <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto1.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
     </div>
-  </section>
+
+    <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto2.png" alt="Kevin Murphy">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Бальзам із термозахистом для живлення та відновлення волосся Kevin Murphy Blow.Dry Rinse
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                      <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto3.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+               <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto4.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                            <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto5.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                       <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto6.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                            <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto7.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                            <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto8.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                            <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-card">
+        <div class="product-card__image">
+            <img src="/images/shop/shopphoto9.png" alt="Redken Extreme">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__price">1,150 ₴</div>
+            <div class="product-card__title">
+                Відновлюючий кондиціонер для пошкодженого волосся Redken Extreme
+            </div>
+            <div class="product-card__actions">
+                <div class="product-card__counter">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                            <button class="product-card__buy-btn">
+    <img src="images/shop/buy.png" alt="cart icon"> Купити
+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+     
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
    <section class="top-section">
       <div class="top-container">
