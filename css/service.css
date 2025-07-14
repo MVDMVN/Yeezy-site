@@ -1,3 +1,8 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .haircare-container {
   max-width: 1920px;
   margin: auto;
@@ -150,13 +155,17 @@
 }
 
 .haircare-info {
+  display: flex;
+  flex-direction: column;
   background-color: #f3f3f3;
   border: 1px solid #F2CC01;
   padding: 64px 80px;
-  margin: 64px 80px;
-  max-width: 1920px;
-  border-radius: 24px;
+
+  margin: 64px auto; /* Центрирование по горизонтали */
+  max-width: 1760px; /* Ограничиваем ширину блока */
+  width: 100%; /* Чтобы на меньших экранах он адаптировался */
   
+  border-radius: 24px;
 }
 
 .haircare-info-inner {
@@ -169,18 +178,22 @@
 .haircare-info-text{
     max-width: 1181px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+     gap: 24px;
 }
 .haircare-info-text h2,
 .haircare-info-text h3 {
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin: 16px 0;
+  max-width: 791px;
 }
 
 .haircare-info-text p {
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 16px;
+ 
   box-sizing: border-box;
 }
 
@@ -208,4 +221,127 @@
 .haircare-info-text li {
   margin-bottom: 8px;
   line-height: 1.6;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .haircare-container {
+    padding: 48px 40px;
+  }
+
+  .haircare-title,
+  .haircare-subtitle {
+    font-size: 36px;
+  }
+
+  .haircare-description {
+    font-size: 15px;
+  }
+
+  .haircare-track {
+    gap: 16px;
+  }
+
+  .haircare-card {
+    flex: 0 0 calc((100% - 2 * 16px) / 3); /* 3 карточки */
+    height: 360px;
+  }
+
+  .haircare-info {
+    padding: 48px 40px;
+  }
+
+  .haircare-info-text h2,
+  .haircare-info-text h3 {
+    font-size: 24px;
+  }
+
+
+
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .haircare-container {
+    padding: 32px 20px;
+  }
+
+  .haircare-title,
+  .haircare-subtitle {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .haircare-description {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .haircare-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .haircare-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .haircare-arrows {
+    align-self: flex-end;
+  }
+
+  .haircare-track {
+    gap: 12px;
+  }
+
+  .haircare-card {
+    flex: 0 0 80%; /* ширина 80% экрана */
+    min-width: 240px;
+    height: 280px;
+  }
+
+  .haircare-info {
+    padding: 32px 20px;
+    margin: 40px auto;
+  }
+
+  .haircare-info-inner {
+    gap: 32px;
+  }
+
+  .haircare-info-text {
+    gap: 16px;
+  }
+
+  .haircare-info-text h2,
+  .haircare-info-text h3 {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+
+  .haircare-info-text p {
+    font-size: 14px;
+  }
+
+  .haircare-info-image img {
+    border-radius: 12px;
+  }
+
+
+}
+
+.haircare-carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.haircare-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  width: max-content;
 }

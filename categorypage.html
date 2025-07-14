@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category page</title>
+     <link rel="stylesheet" href="css/category.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/first-section.css" />
+    <link rel="stylesheet" href="css/news.css" />
+    <link rel="stylesheet" href="css/tops.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/service.css" />
+</head>
+<body>
+
+      <!-- Секция каталога -->
+  <section class="catalog-section">
+
+
+    <div class="catalog-wrapper">
+      <!-- Сайдбар -->
+      <aside class="catalog-sidebar">
+        <div class="catalog-filters">
+          <h3>Категорії</h3>
+          <label><input type="checkbox" /> Кондиціонер</label>
+          <label><input type="checkbox" /> Крем для волосся</label>
+          <label><input type="checkbox" /> Лосьйон</label>
+          <label><input type="checkbox" /> Маски для волосся</label>
+          <label><input type="checkbox" /> Масло для волосся</label>
+          <label><input type="checkbox" /> Спрей для волосся</label>
+          <label><input type="checkbox" /> Спрей для об'єму</label>
+          <label><input type="checkbox" /> Сухий шампунь</label>
+          <label><input type="checkbox" /> Термозахист</label>
+          <label><input type="checkbox" /> Шампунь</label>
+        </div>
+        <div class="catalog-brands" style="margin-top: 1rem;">
+          <h3>Бренди</h3>
+          <label><input type="checkbox" /> KEVIN.MURPHY</label>
+          <label><input type="checkbox" /> REDKEN</label>
+        </div>
+      </aside>
+
+      <!-- Продукты -->
+      <main class="catalog-products">
+        <p>Знайдено 40 товарів</p>
+        <div class="catalog-grid">
+
+          <!-- Карточка товара -->
+          <div class="catalog-card">
+            <img src="https://i.imgur.com/8YqLzY1.png" alt="Redken Extreme Mask" />
+            <div class="catalog-card-content">
+              <div class="catalog-price">1,150 ₴</div>
+              <div class="catalog-title">
+                Багатофункціональна маска Redken Extreme Length Triple Action Treatment Mask
+              </div>
+              <div class="catalog-buy-row">
+                <div class="catalog-qty">
+                  <button onclick="decreaseQty(this)">-</button>
+                  <input type="text" value="1" />
+                  <button onclick="increaseQty(this)">+</button>
+                </div>
+                <button class="catalog-buy-btn">Купити</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </section>
+
+   <section class="top-section">
+      <div class="top-container">
+        <!-- 1) Кнопки-вкладки -->
+        <div class="tabs__buttons">
+          <button class="tabs__button active" data-tab="1">Топ записи</button>
+          <button class="tabs__button" data-tab="2">ТОП Меню</button>
+          <button class="tabs__button" data-tab="3">ТОП Послуги</button>
+        </div>
+
+        <!-- 2) Контейнер для трёх панелей -->
+        <div class="tabs__content">
+          <!-- Вкладка 1 -->
+          <div class="tabs__pane active" data-tab="1">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Манікюр гель лаком ціна</a></li>
+              <li><a href="#">Корекція брів</a></li>
+              <li><a href="#">Укладка</a></li>
+              <li><a href="#">Макіяж для дівча</a></li>
+              <li><a href="#">Чубчик стрижка</a></li>
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+            </ul>
+          </div>
+
+          <!-- Вкладка 2 -->
+          <div class="tabs__pane" data-tab="2">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+            </ul>
+          </div>
+
+          <!-- Вкладка 3 -->
+          <div class="tabs__pane" data-tab="3">
+            <ul class="tabs__list">
+              <li><a href="#">Фарбування волосся в один тон</a></li>
+              <li><a href="#">Вартість омбре</a></li>
+              <li><a href="#">Макіяж яскравий</a></li>
+              <li><a href="#">Корекція і покраска брів</a></li>
+              <li><a href="#">Колорування на коротке волосся</a></li>
+              <li><a href="#">Прайс на корекцію брів воском</a></li>
+              <li><a href="#">Абсолютне щастя для волосся купити</a></li>
+              <li><a href="#">Shatush hair</a></li>
+              <li><a href="#">Салон краси послуги</a></li>
+              <li><a href="#">Манікюр гель лаком Київ</a></li>
+              <li><a href="#">Камуфлювання голови</a></li>
+              <li><a href="#">Ціна на манікюр</a></li>
+              <li><a href="#">Кудряшки афро</a></li>
+              <li><a href="#">Манікюр гель лаком ціна</a></li>
+              <li><a href="#">Корекція брів</a></li>
+              <li><a href="#">Укладка</a></li>
+              <li><a href="#">Макіяж для дівча</a></li>
+              <li><a href="#">Чубчик стрижка</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <!-- Верхняя часть -->
+      <div class="site-footer__top">
+        <!-- Логотип -->
+        <img class="footer-logo" src="images/footer-logo.png" alt="Footer logo" />
+
+        <!-- Категории -->
+        <nav class="footer-menu">
+          <h4 class="footer-menu__title">КАТЕГОРІЇ</h4>
+          <ul class="footer-menu__list">
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Послуги</a></li>
+            <li><a href="#">Новини</a></li>
+            <li><a href="#">Салони</a></li>
+            <li><a href="#">Вакансії</a></li>
+            <li><a href="#">Про Yeezy</a></li>
+          </ul>
+        </nav>
+
+        <!-- Адреса (две колонки внутри) -->
+        <div class="footer-addresses">
+          <h4 class="footer-addresses__title">АДРЕСА</h4>
+          <div class="footer-addresses__grid">
+            <ul class="footer-addresses__list">
+              <li>
+                <span>Дніпровська набережна, 14А</span>
+                <a href="tel:+380688585851" class="footer-addresses__phone">
+                  <!-- вставьте свою SVG-иконку телефона -->
+                  <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 68 858 5851
+                </a>
+              </li>
+              <li>
+                <span>пр. Володимира Івасюка, 4, к. 3</span>
+                <a href="tel:+380638585085" class="footer-addresses__phone"> <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 63 858 5085 </a>
+              </li>
+              <li>
+                <span>Велика Житомирська 8a</span>
+                <a href="tel:+380938585850" class="footer-addresses__phone"> <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 93 858 5850 </a>
+              </li>
+            </ul>
+            <ul class="footer-addresses__list">
+              <li>
+                <span>Верховина 11В</span>
+                <a href="tel:+380738585850" class="footer-addresses__phone"> <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 73 858 5850 </a>
+              </li>
+              <li>
+                <span>вул. Антоновича 44</span>
+                <a href="tel:+380638585850" class="footer-addresses__phone"> <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 63 858 5850 </a>
+              </li>
+              <li>
+                <span>Понеділок – неділя</span>
+                <div class="clock-wrapper"><img class="icon-phone" src="images/icons/clock.png" alt="Clock icon" /> <time>09:00 – 21:00</time></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- О себе + кнопка + соцсети -->
+        <div class="footer-info">
+          <p class="footer-info__text">
+            Ми поєднуємо сучасні технології і професіоналізм майстрів, щоб підкреслити вашу природну красу. Пропонуємо широкий спектр послуг: перукарський сервіс, догляд за
+            обличчям та тілом, манікюр, макіяж і багато іншого. Завітайте до нас, і ми зробимо все, щоб ви відчували себе неперевершено щодня.
+          </p>
+          <a href="#" class="btn btn--yellow footer-info__cta">ЗАПИСАТИСЬ</a>
+        </div>
+      </div>
+
+      <!-- Нижняя строка -->
+      <div class="site-footer__bottom">
+        <div class="footer-bottom__copyright">© 2025 Yeezy Salon</div>
+        <div class="footer-bottom__offer">
+          <a href="#">Договір публічної оферти</a>
+        </div>
+        <!-- пустой блок, чтобы центральная колонка выровнялась по центру -->
+        <div class="footer-info__socials">
+          <!-- ваши SVG-иконки соцсетей -->
+          <a href="#" class="social-icon social-icon--ig"></a>
+          <a href="#" class="social-icon social-icon--tt"></a>
+          <a href="#" class="social-icon social-icon--fb"></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.querySelector(".menu-toggle");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const closeBtn = document.querySelector(".mobile-menu__close");
+        const sublinkBtn = document.querySelector(".mobile-menu__sublink");
+
+        const btns = document.querySelectorAll(".tabs__button");
+        const panes = document.querySelectorAll(".tabs__pane");
+
+        function openMenu() {
+          mobileMenu.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          mobileMenu.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        toggle.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        // Закрытие по клику вне меню (опционально)
+        mobileMenu.addEventListener("click", (e) => {
+          if (e.target === mobileMenu) closeMenu();
+        });
+
+        document.querySelectorAll(".mobile-menu__sublink").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const parentLi = btn.closest(".mobile-menu__item--has-submenu");
+            if (!parentLi) return;
+            parentLi.classList.toggle("open");
+          });
+        });
+
+        btns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const id = btn.getAttribute("data-tab");
+            // 1) сброс всех
+            btns.forEach((b) => b.classList.remove("active"));
+            panes.forEach((p) => p.classList.remove("active"));
+            // 2) активируем нужные
+            btn.classList.add("active");
+            document.querySelector(`.tabs__pane[data-tab="${id}"]`).classList.add("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+    
+</body>
+</html>
