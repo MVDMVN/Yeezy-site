@@ -110,10 +110,8 @@ img {
 .contact-map-section {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  /* gap: 40px; */
   background: #111;
   color: #eee;
-  /* padding: 60px 20px; */
 }
 
 .contact-map-section__info {

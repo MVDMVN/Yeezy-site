@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -158,13 +159,13 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: #f3f3f3;
-  border: 1px solid #F2CC01;
+  border: 1px solid #f2cc01;
   padding: 64px 80px;
 
   margin: 64px auto; /* Центрирование по горизонтали */
   max-width: 1760px; /* Ограничиваем ширину блока */
   width: 100%; /* Чтобы на меньших экранах он адаптировался */
-  
+
   border-radius: 24px;
 }
 
@@ -174,13 +175,12 @@ html, body {
   gap: 40px;
 }
 
- 
-.haircare-info-text{
-    max-width: 1181px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-     gap: 24px;
+.haircare-info-text {
+  max-width: 1181px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .haircare-info-text h2,
 .haircare-info-text h3 {
@@ -193,7 +193,7 @@ html, body {
 .haircare-info-text p {
   font-size: 16px;
   line-height: 1.6;
- 
+
   box-sizing: border-box;
 }
 
@@ -255,9 +255,6 @@ html, body {
   .haircare-info-text h3 {
     font-size: 24px;
   }
-
-
-
 }
 
 /* Мобильные устройства */
@@ -330,8 +327,6 @@ html, body {
   .haircare-info-image img {
     border-radius: 12px;
   }
-
-
 }
 
 .haircare-carousel-wrapper {

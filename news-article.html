@@ -29,16 +29,16 @@
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li><a href="index.html" class="main-nav__link">ГОЛОВНА</a></li>
-            <li class="main-nav__item main-nav__item--has-dropdown">
-              <a href="services.html" class="main-nav__link">ПОСЛУГИ</a>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-menu__link">Услуга 1</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 2</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 3</a></li>
+            <li class="main-nav__item has-submenu">
+              <button class="main-nav__link submenu-toggle" aria-expanded="false">ПОСЛУГИ<span class="submenu-toggle__arrow"></span></button>
+              <ul class="submenu">
+                <li><a href="service.html">Услуга 1</a></li>
+                <li><a href="service.html">Услуга 2</a></li>
+                <li><a href="service.html">Услуга 3</a></li>
               </ul>
             </li>
-            <li><a href="news.html" class="main-nav__link">НОВИНИ</a></li>
-            <li><a href="salons.html" class="main-nav__link main-nav__link--active">САЛОНИ</a></li>
+            <li><a href="news.html" class="main-nav__link main-nav__link--active">НОВИНИ</a></li>
+            <li><a href="salons.html" class="main-nav__link">САЛОНИ</a></li>
             <li><a href="#" class="main-nav__link">ВАКАНСІЇ</a></li>
             <li><a href="#" class="main-nav__link">ПРО YEEZY</a></li>
           </ul>
@@ -56,26 +56,24 @@
         </div>
         <nav class="mobile-menu__nav">
           <ul>
-            <li><a href="index.html" class="mobile-menu__link mobile-menu__link--active">ГОЛОВНА</a></li>
+            <li><a href="index.html" class="mobile-menu__link">ГОЛОВНА</a></li>
             <li class="mobile-menu__item mobile-menu__item--has-submenu">
-              <a href="services.html">
-                <button class="mobile-menu__sublink" type="button">ПОСЛУГИ <span class="submenu-arrow">▾</span></button>
-              </a>
+              <button class="mobile-menu__sublink" type="button" aria-expanded="false">ПОСЛУГИ <span class="submenu-arrow">▾</span></button>
               <ul class="mobile-submenu">
                 <li><a href="#" class="mobile-submenu__link">Услуга 1</a></li>
                 <li><a href="#" class="mobile-submenu__link">Услуга 2</a></li>
                 <li><a href="#" class="mobile-submenu__link">Услуга 3</a></li>
               </ul>
             </li>
-            <li><a href="news.html" class="mobile-menu__link">НОВИНИ</a></li>
+            <li><a href="news.html" class="mobile-menu__link mobile-menu__link--active">НОВИНИ</a></li>
             <li><a href="salons.html" class="mobile-menu__link">САЛОНИ</a></li>
             <li><a href="#" class="mobile-menu__link">ВАКАНСІЇ</a></li>
             <li><a href="#" class="mobile-menu__link">ПРО YEEZY</a></li>
           </ul>
         </nav>
         <div class="mobile-menu__socials">
-          <a href="#" class="social-icon social-icon--insta"></a>
-          <a href="#" class="social-icon social-icon--tiktok"></a>
+          <a href="#" class="social-icon social-icon--ig"></a>
+          <a href="#" class="social-icon social-icon--tt"></a>
           <a href="#" class="social-icon social-icon--fb"></a>
         </div>
         <a href="#" class="btn btn--gold mobile-menu__cta">ЗАПИСАТИСЬ</a>
@@ -85,13 +83,15 @@
     <section class="page-hero" style="background-image: url('images/news-article-bg.png')">
       <div class="container-links">
         <nav class="breadcrumb">
-          <a href="#" class="breadcrumb__link">Головна</a>
+          <a href="index.html" class="breadcrumb__link">Головна</a>
           <span class="breadcrumb__sep">›</span>
-          <span class="breadcrumb__current">Новини</span>
+          <a class="breadcrumb__link" href="news.html">
+            <span class="breadcrumb__link">Новини</span>
+          </a>
           <span class="breadcrumb__sep">›</span>
-          <span class="breadcrumb__current">Догляд для волоссям</span>
+          <span class="breadcrumb__current">Догляд для волосся</span>
         </nav>
-        <h1 class="page-hero__title">Догляд для волоссям</h1>
+        <h1 class="page-hero__title">Догляд для волосся</h1>
       </div>
     </section>
 
@@ -113,16 +113,13 @@
 
     <section class="top-section">
       <div class="top-container">
-        <!-- 1) Кнопки-вкладки -->
         <div class="tabs__buttons">
           <button class="tabs__button active" data-tab="1">Топ записи</button>
           <button class="tabs__button" data-tab="2">ТОП Меню</button>
           <button class="tabs__button" data-tab="3">ТОП Послуги</button>
         </div>
 
-        <!-- 2) Контейнер для трёх панелей -->
         <div class="tabs__content">
-          <!-- Вкладка 1 -->
           <div class="tabs__pane active" data-tab="1">
             <ul class="tabs__list">
               <li><a href="#">Фарбування волосся в один тон</a></li>
@@ -149,7 +146,6 @@
             </ul>
           </div>
 
-          <!-- Вкладка 2 -->
           <div class="tabs__pane" data-tab="2">
             <ul class="tabs__list">
               <li><a href="#">Фарбування волосся в один тон</a></li>
@@ -171,7 +167,6 @@
             </ul>
           </div>
 
-          <!-- Вкладка 3 -->
           <div class="tabs__pane" data-tab="3">
             <ul class="tabs__list">
               <li><a href="#">Фарбування волосся в один тон</a></li>
@@ -199,12 +194,9 @@
     </section>
 
     <footer class="site-footer">
-      <!-- Верхняя часть -->
       <div class="site-footer__top">
-        <!-- Логотип -->
         <img class="footer-logo" src="images/footer-logo.png" alt="Footer logo" />
 
-        <!-- Категории -->
         <nav class="footer-menu">
           <h4 class="footer-menu__title">КАТЕГОРІЇ</h4>
           <ul class="footer-menu__list">
@@ -217,17 +209,13 @@
           </ul>
         </nav>
 
-        <!-- Адреса (две колонки внутри) -->
         <div class="footer-addresses">
           <h4 class="footer-addresses__title">АДРЕСА</h4>
           <div class="footer-addresses__grid">
             <ul class="footer-addresses__list">
               <li>
                 <span>Дніпровська набережна, 14А</span>
-                <a href="tel:+380688585851" class="footer-addresses__phone">
-                  <!-- вставьте свою SVG-иконку телефона -->
-                  <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 68 858 5851
-                </a>
+                <a href="tel:+380688585851" class="footer-addresses__phone"> <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 68 858 5851 </a>
               </li>
               <li>
                 <span>пр. Володимира Івасюка, 4, к. 3</span>
@@ -255,7 +243,6 @@
           </div>
         </div>
 
-        <!-- О себе + кнопка + соцсети -->
         <div class="footer-info">
           <p class="footer-info__text">
             Ми поєднуємо сучасні технології і професіоналізм майстрів, щоб підкреслити вашу природну красу. Пропонуємо широкий спектр послуг: перукарський сервіс, догляд за
@@ -265,15 +252,13 @@
         </div>
       </div>
 
-      <!-- Нижняя строка -->
       <div class="site-footer__bottom">
         <div class="footer-bottom__copyright">© 2025 Yeezy Salon</div>
         <div class="footer-bottom__offer">
           <a href="#">Договір публічної оферти</a>
         </div>
-        <!-- пустой блок, чтобы центральная колонка выровнялась по центру -->
+
         <div class="footer-info__socials">
-          <!-- ваши SVG-иконки соцсетей -->
           <a href="#" class="social-icon social-icon--ig"></a>
           <a href="#" class="social-icon social-icon--tt"></a>
           <a href="#" class="social-icon social-icon--fb"></a>

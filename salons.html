@@ -29,12 +29,12 @@
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li><a href="index.html" class="main-nav__link">ГОЛОВНА</a></li>
-            <li class="main-nav__item main-nav__item--has-dropdown">
-              <a href="services.html" class="main-nav__link">ПОСЛУГИ</a>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-menu__link">Услуга 1</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 2</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 3</a></li>
+            <li class="main-nav__item has-submenu">
+              <button class="main-nav__link submenu-toggle" aria-expanded="false">ПОСЛУГИ<span class="submenu-toggle__arrow"></span></button>
+              <ul class="submenu">
+                <li><a href="service.html">Услуга 1</a></li>
+                <li><a href="service.html">Услуга 2</a></li>
+                <li><a href="service.html">Услуга 3</a></li>
               </ul>
             </li>
             <li><a href="news.html" class="main-nav__link">НОВИНИ</a></li>
@@ -58,9 +58,7 @@
           <ul>
             <li><a href="index.html" class="mobile-menu__link mobile-menu__link--active">ГОЛОВНА</a></li>
             <li class="mobile-menu__item mobile-menu__item--has-submenu">
-              <a href="services.html">
-                <button class="mobile-menu__sublink" type="button">ПОСЛУГИ <span class="submenu-arrow">▾</span></button>
-              </a>
+              <button class="mobile-menu__sublink" type="button" aria-expanded="false">ПОСЛУГИ <span class="submenu-arrow">▾</span></button>
               <ul class="mobile-submenu">
                 <li><a href="#" class="mobile-submenu__link">Услуга 1</a></li>
                 <li><a href="#" class="mobile-submenu__link">Услуга 2</a></li>
@@ -74,8 +72,8 @@
           </ul>
         </nav>
         <div class="mobile-menu__socials">
-          <a href="#" class="social-icon social-icon--insta"></a>
-          <a href="#" class="social-icon social-icon--tiktok"></a>
+          <a href="#" class="social-icon social-icon--ig"></a>
+          <a href="#" class="social-icon social-icon--tt"></a>
           <a href="#" class="social-icon social-icon--fb"></a>
         </div>
         <a href="#" class="btn btn--gold mobile-menu__cta">ЗАПИСАТИСЬ</a>
@@ -85,9 +83,11 @@
     <section class="page-hero" style="background-image: url('images/salons-bg.png')">
       <div class="container-links">
         <nav class="breadcrumb">
-          <a href="#" class="breadcrumb__link">Головна</a>
+          <a href="index.html" class="breadcrumb__link">Головна</a>
           <span class="breadcrumb__sep">›</span>
-          <span class="breadcrumb__current">Салони</span>
+          <a class="breadcrumb__link" href="salons.html">
+            <span class="breadcrumb__link">Салони</span>
+          </a>
         </nav>
         <h1 class="page-hero__title">Салони</h1>
       </div>
@@ -195,16 +195,13 @@
 
     <section class="top-section">
       <div class="top-container">
-        <!-- 1) Кнопки-вкладки -->
         <div class="tabs__buttons">
           <button class="tabs__button active" data-tab="1">Топ записи</button>
           <button class="tabs__button" data-tab="2">ТОП Меню</button>
           <button class="tabs__button" data-tab="3">ТОП Послуги</button>
         </div>
 
-        <!-- 2) Контейнер для трёх панелей -->
         <div class="tabs__content">
-          <!-- Вкладка 1 -->
           <div class="tabs__pane active" data-tab="1">
             <ul class="tabs__list">
               <li><a href="#">Фарбування волосся в один тон</a></li>
@@ -231,7 +228,6 @@
             </ul>
           </div>
 
-          <!-- Вкладка 2 -->
           <div class="tabs__pane" data-tab="2">
             <ul class="tabs__list">
               <li><a href="#">Фарбування волосся в один тон</a></li>
@@ -253,7 +249,6 @@
             </ul>
           </div>
 
-          <!-- Вкладка 3 -->
           <div class="tabs__pane" data-tab="3">
             <ul class="tabs__list">
               <li><a href="#">Фарбування волосся в один тон</a></li>
@@ -281,12 +276,9 @@
     </section>
 
     <footer class="site-footer">
-      <!-- Верхняя часть -->
       <div class="site-footer__top">
-        <!-- Логотип -->
         <img class="footer-logo" src="images/footer-logo.png" alt="Footer logo" />
 
-        <!-- Категории -->
         <nav class="footer-menu">
           <h4 class="footer-menu__title">КАТЕГОРІЇ</h4>
           <ul class="footer-menu__list">
@@ -299,17 +291,13 @@
           </ul>
         </nav>
 
-        <!-- Адреса (две колонки внутри) -->
         <div class="footer-addresses">
           <h4 class="footer-addresses__title">АДРЕСА</h4>
           <div class="footer-addresses__grid">
             <ul class="footer-addresses__list">
               <li>
                 <span>Дніпровська набережна, 14А</span>
-                <a href="tel:+380688585851" class="footer-addresses__phone">
-                  <!-- вставьте свою SVG-иконку телефона -->
-                  <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 68 858 5851
-                </a>
+                <a href="tel:+380688585851" class="footer-addresses__phone"> <img class="icon-phone" src="images/icons/phone.png" alt="Phone icon" /> +380 68 858 5851 </a>
               </li>
               <li>
                 <span>пр. Володимира Івасюка, 4, к. 3</span>
@@ -337,7 +325,6 @@
           </div>
         </div>
 
-        <!-- О себе + кнопка + соцсети -->
         <div class="footer-info">
           <p class="footer-info__text">
             Ми поєднуємо сучасні технології і професіоналізм майстрів, щоб підкреслити вашу природну красу. Пропонуємо широкий спектр послуг: перукарський сервіс, догляд за
@@ -347,15 +334,13 @@
         </div>
       </div>
 
-      <!-- Нижняя строка -->
       <div class="site-footer__bottom">
         <div class="footer-bottom__copyright">© 2025 Yeezy Salon</div>
         <div class="footer-bottom__offer">
           <a href="#">Договір публічної оферти</a>
         </div>
-        <!-- пустой блок, чтобы центральная колонка выровнялась по центру -->
+
         <div class="footer-info__socials">
-          <!-- ваши SVG-иконки соцсетей -->
           <a href="#" class="social-icon social-icon--ig"></a>
           <a href="#" class="social-icon social-icon--tt"></a>
           <a href="#" class="social-icon social-icon--fb"></a>
@@ -385,7 +370,7 @@
 
         toggle.addEventListener("click", openMenu);
         closeBtn.addEventListener("click", closeMenu);
-        // Закрытие по клику вне меню (опционально)
+
         mobileMenu.addEventListener("click", (e) => {
           if (e.target === mobileMenu) closeMenu();
         });
@@ -401,10 +386,10 @@
         btns.forEach((btn) => {
           btn.addEventListener("click", () => {
             const id = btn.getAttribute("data-tab");
-            // 1) сброс всех
+
             btns.forEach((b) => b.classList.remove("active"));
             panes.forEach((p) => p.classList.remove("active"));
-            // 2) активируем нужные
+
             btn.classList.add("active");
             document.querySelector(`.tabs__pane[data-tab="${id}"]`).classList.add("active");
           });
