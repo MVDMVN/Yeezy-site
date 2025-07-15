@@ -58,7 +58,6 @@ img {
 .main-slider .swiper-slide img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
 }
 .thumb-slider {
   height: 100px;
@@ -76,7 +75,6 @@ img {
   object-fit: cover;
 }
 
-/* ---- ИНФО ---- */
 .product-detail__header {
   margin-bottom: 24px;
 }
@@ -162,8 +160,6 @@ img {
   background-color: #d3af37;
 }
 
-.product-detail__tabs {
-}
 .product-tabs__buttons {
   display: flex;
   gap: 16px;

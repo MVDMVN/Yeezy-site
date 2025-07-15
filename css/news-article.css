@@ -47,7 +47,6 @@ img {
 
 .article-btn {
   display: inline-block;
-  /* background: var(--yellow); */
   background: linear-gradient(90deg, #ffd701 0%, #998101 100%);
   padding: 15px 44px;
   text-transform: uppercase;
