@@ -147,6 +147,7 @@ body {
 }
 
 .hero__content p {
+  padding-top: 27px;
   max-width: 36rem;
   font-weight: 400;
   font-size: 1rem;
@@ -207,6 +208,16 @@ body {
   left: 43.3%;
 }
 
+.social-icons-head {
+  position: absolute;
+  bottom: 40px; /* или другое значение, в зависимости от вашего макета */
+  left: 80px;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  gap: 16px;
+}
+
 .social-icons {
   position: absolute;
   bottom: 40px; /* или другое значение, в зависимости от вашего макета */
@@ -223,6 +234,15 @@ body {
 }
 
 .social-icons a img:hover {
+  opacity: 1;
+}
+
+.social-icons-head a img {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.social-icons-head a img:hover {
   opacity: 1;
 }
 
@@ -536,6 +556,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+  margin-top: 50px;
 }
 
 .news-header h2 {
@@ -560,12 +581,15 @@ body {
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(4, 422px);
-  column-gap: 24px;
-  row-gap: 60px;
-  justify-content: center;
-  margin-bottom: 140px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1768px;
+  
+  margin: 0 80px;
+  margin-bottom: 80px;
+  box-sizing: border-box;
 }
+
 
 .news-card {
   border-radius: 16px;
@@ -641,6 +665,10 @@ body {
 
 .about__image-inner {
   box-sizing: border-box;
+}
+
+.faq-toggle-icon{
+  display: none;
 }
 
 .about__image {
@@ -758,13 +786,14 @@ body {
 
 .info-block {
   display: flex;
-  
+
   justify-content: start;
   flex-direction: column;
   align-items: start;
   flex-wrap: wrap;
   padding-top: 20px;
   text-align: start;
+          gap: 40px;
 }
 
 .info-item {
@@ -773,6 +802,7 @@ body {
   align-items: start;
   color: white;
   font-size: 15px;
+  gap: 17px;
 }
 
 .info-item strong {
@@ -802,7 +832,6 @@ body {
 .info-line a:hover {
   text-decoration: underline;
 }
-
 
 .info-box {
   position: absolute;
@@ -902,6 +931,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: none;
   }
 
   .faq-toggle-icon {
@@ -921,6 +951,7 @@ body {
     padding: 0 16px;
     top: 0;
     left: 0;
+    margin: 20px 0;
   }
 
   .about__image-p {
@@ -928,6 +959,8 @@ body {
     top: 0;
     left: 0;
     padding: 0 16px;
+    font-size: 40px;
+    max-width:none;
   }
   .hero {
     flex-direction: column;
@@ -937,7 +970,7 @@ body {
   .hero__content {
     width: 100%;
     height: auto;
-    padding: 124px 16px 50px 16px;
+    padding: 124px 16px 90px 16px;
   }
 
   .hero__slider {
@@ -1004,7 +1037,9 @@ body {
   .signup-title {
     font-size: 48px;
   }
-
+.faq-toggle-icon{
+  display: block;
+}
   .signup-section {
     flex-direction: column;
     width: 100%;
@@ -1018,6 +1053,10 @@ body {
     padding: 0 16px;
   }
 
+  .faq-container{
+    padding: 0 16px;
+  }
+
   .signup-photo {
     max-width: 300px;
     width: 100%;
@@ -1028,16 +1067,12 @@ body {
     margin-bottom: 100px;
   }
 
-  .news-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 16px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+  .info-block {
+    gap: 40px;
+  }
 
-    padding: 0 16px; /* Внутренние отступы */
-    box-sizing: border-box;
+  .info-item{
+    gap: 17px;
   }
 
   .news-card {
@@ -1070,20 +1105,7 @@ body {
     padding: 0 16px;
   }
 
-  .faq-container {
-    padding: 0 16px;
-  }
-  .about__image-title h2 {
-    font-size: 36px;
-  }
 
-  .news-section {
-    padding-left: 16px;
-  }
-
-  .faq-question {
-    font-size: 22px;
-  }
 
   .grid {
     display: flex;
@@ -1103,12 +1125,17 @@ body {
     scroll-snap-align: start;
   }
 
+  .signup-section {
+    margin-top: 40px;
+  }
   .signup-left {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
-
+.faq-item {
+  flex-direction: column;
+}
   .signup-description {
     display: flex;
     flex-direction: column;
@@ -1119,8 +1146,9 @@ body {
   }
 
   .contacts-map {
-    height: 570px;
+    height: 670px;
     overflow: visible;
+    margin-bottom: 400px;
   }
 
   .map-box {
@@ -1130,19 +1158,20 @@ body {
   }
 
   .info-box {
-    position: static;
+      position: static !important;
+  z-index: auto !important;
     width: 100%;
-    padding: 24px;
-    background: #000000cc;
-    border-radius: 24px;
+  
+    background: #0e0e0e;
+    border-radius: 0px;
     font-size: 14px;
     margin: 0 auto;
   }
 
   #map {
     width: 100%;
-    height: 100%;
-    border-radius: 16px;
+    height: 640px;
+   
   }
 }
 
@@ -1151,7 +1180,9 @@ body {
     height: 240px;
   }
 
-
+  .top-section {
+    margin-top: 150px;
+  }
 
   /* Мобильные: до 768px */
 
@@ -1170,7 +1201,11 @@ body {
   }
 }
 
+
 @media (max-width: 768px) {
+  .signup-photo {
+    max-width: none;
+  }
   .line-text {
     font-size: 2rem;
   }
@@ -1178,6 +1213,8 @@ body {
   .hero__content {
     padding-top: 160px;
   }
+
+
 
   .slider__pagination {
     bottom: 0.75rem;
@@ -1188,15 +1225,19 @@ body {
   }
 
   .news-header {
-    margin: 0 18px;
+    margin: 0;
+    margin-bottom: 24px;
     flex-direction: column;
     align-items: start;
     gap: 10px;
+    padding: 0 16px;
+    
   }
 
-  .about__image-p{
+  .about__image-p {
     padding: 0 16px;
     margin-bottom: 30px;
+    font-size: 14px;
   }
 
   .news-header h2 {
@@ -1221,7 +1262,8 @@ body {
   }
 
   .signup-title {
-    font-size: 36px;
+    font-size: 32px;
+    padding-top: 42px;
   }
 
   .signup-form {
@@ -1237,13 +1279,13 @@ body {
   .faq-question {
     font-size: 16px;
     gap: 0;
-    
   }
   .faq-question p {
     max-width: 270px;
   }
 
   .signup-right {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
   }
@@ -1252,7 +1294,7 @@ body {
   .news-header h2 {
     font-size: 32px;
     padding: 0;
-    margin: 0;
+    margin-top: 0px;
   }
 
   .about__image {
@@ -1275,14 +1317,9 @@ body {
   }
 
   .social-icons {
-    position: static;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 16px;
-    margin-top: 58px;
-    width: 100%;
-    height: auto;
+    bottom: none;
+    top: 349px;
+    left: 16px;
   }
 
   .social-icons a img {
@@ -1294,6 +1331,24 @@ body {
   }
 
   .social-icons a img:hover {
+    opacity: 1;
+  }
+
+  .social-icons-head {
+    bottom: none;
+    bottom: 325px;
+    left: 16px;
+  }
+
+  .social-icons-head a img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    float: l;
+  }
+
+  .social-icons-head a img:hover {
     opacity: 1;
   }
 
@@ -1321,20 +1376,140 @@ body {
     object-fit: cover;
   }
 
-    .map-box {
+  .map-box {
     height: 240px;
   }
 
   .info-box {
-    padding: 16px;
+    padding:40px 16px;
     font-size: 18px;
     border-radius: 0;
-    background:#000
-    
+    background: #000;
   }
 
   #map {
     border-radius: 0;
   }
+}
 
+
+
+@media (max-width: 1024px) {
+  .news-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 16px;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 16px;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: flex-start;
+       margin-bottom: 40px;
+  }
+
+  .news-card {
+    flex: 0 0 auto;
+    width: 309px;
+    scroll-snap-align: start;
+  }
+
+  .news-card img {
+    height: 165px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .news-card h3 {
+    font-size: 18px;
+    margin: 12px 0 6px;
+  }
+
+  .news-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    flex-grow: inherit;
+  }
+
+  .news-card a {
+    font-size: 14px;
+    margin: 0;
+ 
+  }
+}
+
+
+
+@media (min-width: 1025px) and (max-width: 1800px) {
+  .index {
+    margin: 0 clamp(24px, 5vw, 80px);
+    gap: clamp(24px, 4vw, 40px);
+  }
+
+  .signup-left {
+    max-width: clamp(300px, 30%, 450px);
+    flex: 1;
+  }
+
+  .signup-title {
+    font-size: clamp(36px, 3vw, 74px);
+    line-height: 1.2;
+  }
+
+  .signup-description {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.5;
+    gap: clamp(12px, 2vw, 20px);
+  }
+
+  .signup-logo {
+    width: 100%;
+    max-width: clamp(120px, 20vw, 182px);
+    height: auto;
+  }
+
+  .signup-right {
+    flex: 1;
+    max-width: 100%;
+    padding: clamp(24px, 4vw, 50px);
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 4vw, 40px);
+  }
+
+  .signup-photo {
+    width: 100%;
+    max-width: clamp(200px, 30vw, 380px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .signup-form {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    gap: clamp(10px, 1.5vw, 20px);
+  }
+
+  .signup-form label {
+    font-size: clamp(12px, 1vw, 14px);
+  }
+
+  .signup-form input[type="text"],
+  .signup-form input[type="tel"] {
+    font-size: clamp(14px, 1.1vw, 16px);
+    padding: clamp(6px, 1vw, 10px) clamp(10px, 2vw, 16px);
+  }
+
+  .btn-submit {
+    padding: clamp(10px, 1.3vw, 14px);
+    font-size: clamp(14px, 1.2vw, 16px);
+    width: 100%;
+  }
 }
