@@ -29,12 +29,12 @@
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li><a href="index.html" class="main-nav__link">ГОЛОВНА</a></li>
-            <li class="main-nav__item main-nav__item--has-dropdown">
-              <a href="services.html" class="main-nav__link">ПОСЛУГИ</a>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-menu__link">Услуга 1</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 2</a></li>
-                <li><a href="#" class="dropdown-menu__link">Услуга 3</a></li>
+            <li class="main-nav__item has-submenu">
+              <button class="main-nav__link submenu-toggle" aria-expanded="false">ПОСЛУГИ <span class="submenu-toggle__arrow"></span></button>
+              <ul class="submenu">
+                <li><a href="#">Услуга 1</a></li>
+                <li><a href="#">Услуга 2</a></li>
+                <li><a href="#">Услуга 3</a></li>
               </ul>
             </li>
             <li><a href="news.html" class="main-nav__link">НОВИНИ</a></li>
@@ -58,9 +58,7 @@
           <ul>
             <li><a href="index.html" class="mobile-menu__link mobile-menu__link--active">ГОЛОВНА</a></li>
             <li class="mobile-menu__item mobile-menu__item--has-submenu">
-              <a href="services.html">
-                <button class="mobile-menu__sublink" type="button">ПОСЛУГИ <span class="submenu-arrow">▾</span></button>
-              </a>
+              <button class="mobile-menu__sublink" type="button" aria-expanded="false">ПОСЛУГИ <span class="submenu-arrow">▾</span></button>
               <ul class="mobile-submenu">
                 <li><a href="#" class="mobile-submenu__link">Услуга 1</a></li>
                 <li><a href="#" class="mobile-submenu__link">Услуга 2</a></li>
@@ -74,8 +72,8 @@
           </ul>
         </nav>
         <div class="mobile-menu__socials">
-          <a href="#" class="social-icon social-icon--insta"></a>
-          <a href="#" class="social-icon social-icon--tiktok"></a>
+          <a href="#" class="social-icon social-icon--ig"></a>
+          <a href="#" class="social-icon social-icon--tt"></a>
           <a href="#" class="social-icon social-icon--fb"></a>
         </div>
         <a href="#" class="btn btn--gold mobile-menu__cta">ЗАПИСАТИСЬ</a>
@@ -329,6 +327,37 @@
         const btns = document.querySelectorAll(".tabs__button");
         const panes = document.querySelectorAll(".tabs__pane");
 
+        document.querySelectorAll(".submenu-toggle").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // не даём кликнуть «вне» себя случайно
+            const li = btn.closest(".has-submenu");
+            const isOpen = li.classList.toggle("open");
+            btn.setAttribute("aria-expanded", isOpen);
+
+            // Закрываем все прочие dropdown’ы
+            document.querySelectorAll(".has-submenu.open").forEach((other) => {
+              if (other !== li) {
+                other.classList.remove("open");
+                other.querySelector(".submenu-toggle").setAttribute("aria-expanded", false);
+              }
+            });
+          });
+        });
+
+        const buttons = document.querySelectorAll(".mobile-menu__sublink");
+        console.log("Found toggle buttons:", buttons.length);
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const li = btn.closest(".mobile-menu__item--has-submenu");
+            console.log("Toggling submenu on", li);
+            li.classList.toggle("open");
+            btn.setAttribute("aria-expanded", li.classList.contains("open"));
+          });
+        });
+
         function openMenu() {
           mobileMenu.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
@@ -344,14 +373,6 @@
         // Закрытие по клику вне меню (опционально)
         mobileMenu.addEventListener("click", (e) => {
           if (e.target === mobileMenu) closeMenu();
-        });
-
-        document.querySelectorAll(".mobile-menu__sublink").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const parentLi = btn.closest(".mobile-menu__item--has-submenu");
-            if (!parentLi) return;
-            parentLi.classList.toggle("open");
-          });
         });
 
         btns.forEach((btn) => {
