@@ -79,6 +79,7 @@
         <a href="#" class="btn btn--gold mobile-menu__cta">ЗАПИСАТИСЬ</a>
       </div>
     </aside>
+
     <section class="hero">
       <img src="images/absolutephoto1.jpg" alt="photo1" class="absolute-photo photoA" />
       <img src="images/absolutephoto2.jpg" alt="photo2" class="absolute-photo photoB" />
@@ -615,6 +616,37 @@
         const btns = document.querySelectorAll(".tabs__button");
         const panes = document.querySelectorAll(".tabs__pane");
 
+        document.querySelectorAll(".submenu-toggle").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // не даём кликнуть «вне» себя случайно
+            const li = btn.closest(".has-submenu");
+            const isOpen = li.classList.toggle("open");
+            btn.setAttribute("aria-expanded", isOpen);
+
+            // Закрываем все прочие dropdown’ы
+            document.querySelectorAll(".has-submenu.open").forEach((other) => {
+              if (other !== li) {
+                other.classList.remove("open");
+                other.querySelector(".submenu-toggle").setAttribute("aria-expanded", false);
+              }
+            });
+          });
+        });
+
+        const buttons = document.querySelectorAll(".mobile-menu__sublink");
+        console.log("Found toggle buttons:", buttons.length);
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const li = btn.closest(".mobile-menu__item--has-submenu");
+            console.log("Toggling submenu on", li);
+            li.classList.toggle("open");
+            btn.setAttribute("aria-expanded", li.classList.contains("open"));
+          });
+        });
+
         function openMenu() {
           mobileMenu.setAttribute("aria-hidden", "false");
           document.body.style.overflow = "hidden";
@@ -630,14 +662,6 @@
         // Закрытие по клику вне меню (опционально)
         mobileMenu.addEventListener("click", (e) => {
           if (e.target === mobileMenu) closeMenu();
-        });
-
-        document.querySelectorAll(".mobile-menu__sublink").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const parentLi = btn.closest(".mobile-menu__item--has-submenu");
-            if (!parentLi) return;
-            parentLi.classList.toggle("open");
-          });
         });
 
         btns.forEach((btn) => {
